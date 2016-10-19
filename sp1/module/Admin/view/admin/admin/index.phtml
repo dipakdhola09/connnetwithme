@@ -1,0 +1,281 @@
+<div class="header-bg">
+    <div class="header-title">DASHBOARD</div>
+</div>
+<div class="side-menu show-for-small-only">
+    <ul>
+        <li class="active dashboard"><a href="<?= $this->basePath('admin') ?>" title="">Dashboard</a></li>
+        <li class="user-search"><a href="<?= $this->basePath('admin/userSearch') ?>" title="">User Search</a></li>
+        <li class="change-password"><a href="javascript:void(0)" title="">Change Password</a></li>
+        <li class="logout"><a href="" title="javascript:void(0)">Logout</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="text-center dashboard-title">Summary</div>
+    <div class="small-12 medium-12 large-12 columns">
+        <div class="accounts-details">
+            <div class="form-date-header">
+                <div class="form-date">
+                    <label>From:</label>
+                    <div id='dateInput'> </div>
+                </div>
+                <div class="form-date">
+                    <label>To:</label>
+                    <div id='dateInput-1'> </div>
+                </div>
+            </div>
+            <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+                <div id="jqxgrid"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center dashboard-title">TOTAL ACCOUNTS SUMMARY</div>
+    <div class="small-12 medium-12 large-12 columns">
+        <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+            <div id="jqxgrid-1"> </div>
+        </div>
+    </div>
+    <div class="small-12 medium-6 large-6 columns p-l-0">
+        <div class="text-center dashboard-title">SMS USAGE SUMMARY</div>
+        <div class="accounts-details">
+            <div class="form-date-header">
+                <div class="form-date">
+                    <label>From:</label>
+                    <div id='dateInput-2'> </div>
+                </div>
+                <div class="form-date">
+                    <label>To:</label>
+                    <div id='dateInput-3'> </div>
+                </div>
+            </div>
+            <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+                <div id="jqxgrid-2"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-12 medium-6 large-6 columns p-r-0">
+        <div class="text-center dashboard-title">Expiring Accounts</div>
+        <div class="accounts-details">
+            <div class="form-date-header">
+                <div class="form-date">
+                    <label>From:</label>
+                    <div id='dateInput-4'> </div>
+                </div>
+                <div class="form-date">
+                    <label>To:</label>
+                    <div id='dateInput-5'> </div>
+                </div>
+            </div>
+            <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+                <div id="jqxgrid-3"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="large-12 small-12 columns footer-text"> Copyright 2016 
+            <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a> •   All Rights Reserved </div>
+    </div>
+</footer>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script> 
+<script src="http://foundation.zurb.com/sites/docs/v/5.5.3/assets/js/modernizr.js"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcalendar.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdatetimeinput.js'); ?>"></script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#dateInput").jqxDateTimeInput({width: '130px', height: '25px'});
+        $("#dateInput-1").jqxDateTimeInput({width: '130px', height: '25px'});
+        $("#dateInput-2").jqxDateTimeInput({width: '130px', height: '25px'});
+        $("#dateInput-3").jqxDateTimeInput({width: '130px', height: '25px'});
+        $("#dateInput-4").jqxDateTimeInput({width: '130px', height: '25px'});
+        $("#dateInput-5").jqxDateTimeInput({width: '130px', height: '25px'});
+    });
+</script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "data/summary-1.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'TotalAccountsCreated', },
+                        {name: 'TotalAccountsConverted', },
+                        {name: 'AccountsUpgraded', },
+                        {name: 'NewRevenue', },
+                        {name: 'MembershipRevenue', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'SummaryID',
+                    url: url,
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        $("#jqxgrid").jqxGrid({
+            width: '100%',
+            autoheight: true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: false,
+            pageable: false,
+            showsortcolumnbackground: false,
+            filterable: false,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'Total Accounts Created', datafield: 'TotalAccountsCreated', width: '20%', cellsalign: 'center', align: 'center'},
+                {text: 'Total Accounts Converted', datafield: 'TotalAccountsConverted', width: '20%', cellsalign: 'center', align: 'center'},
+                {text: 'Accounts Upgraded', datafield: 'AccountsUpgraded', width: '20%', cellsalign: 'center', align: 'center'},
+                {text: 'New Revenue', datafield: 'NewRevenue', width: '20%', cellsalign: 'center', align: 'center'},
+                {text: 'Membership Revenue', datafield: 'MembershipRevenue', width: '20%', cellsalign: 'center', align: 'center'}
+            ],
+        });
+    });
+</script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "data/summary-2.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'TotalAccounts', },
+                        {name: 'TotalPaidAccounts', },
+                        {name: 'TrialAccounts', },
+                        {name: 'BasicAccounts', },
+                        {name: 'ProfessionalAccounts', },
+                        {name: 'EnterpriseAccounts', },
+                        {name: 'NonPaidAccounts', },
+                        {name: 'CancelledAccounts', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'SummaryID',
+                    url: url,
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        $("#jqxgrid-1").jqxGrid({
+            width: '100%',
+            autoheight: true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: false,
+            pageable: false,
+            showsortcolumnbackground: false,
+            filterable: false,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'Total Accounts', datafield: 'TotalAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Total Paid Accounts', datafield: 'TotalPaidAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Trial Accounts', datafield: 'TrialAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Basic Accounts', datafield: 'BasicAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Professional Accounts', datafield: 'ProfessionalAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Enterprise Accounts', datafield: 'EnterpriseAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Non-Paid Accounts', datafield: 'NonPaidAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'},
+                {text: 'Cancelled Accounts', datafield: 'CancelledAccounts', width: '12.5%', minwidth: '100px', cellsalign: 'center', align: 'center'}
+            ],
+        });
+    });
+</script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "data/summary-3.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'SMSUsage', },
+                        {name: 'MMSUsage', },
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'SummaryID',
+                    url: url,
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        $("#jqxgrid-2").jqxGrid({
+            width: '100%',
+            autoheight: true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: false,
+            pageable: false,
+            showsortcolumnbackground: false,
+            filterable: false,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'SMS Usage', datafield: 'SMSUsage', width: '50%', cellsalign: 'center', align: 'center'},
+                {text: 'MMS Usage', datafield: 'MMSUsage', width: '50%', cellsalign: 'center', align: 'center'}
+            ],
+        });
+    });
+</script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "data/summary-4.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'FreeTrialsExpiring', },
+                        {name: 'MembershipDeclines', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'SummaryID',
+                    url: url,
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        $("#jqxgrid-3").jqxGrid({
+            width: '100%',
+            autoheight: true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: false,
+            pageable: false,
+            showsortcolumnbackground: false,
+            filterable: false,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'Free Trials Expiring', datafield: 'FreeTrialsExpiring', width: '50%', cellsalign: 'center', align: 'center'},
+                {text: 'Membership Declines', datafield: 'MembershipDeclines', width: '50%', cellsalign: 'center', align: 'center'}
+            ],
+        });
+    });
+</script>

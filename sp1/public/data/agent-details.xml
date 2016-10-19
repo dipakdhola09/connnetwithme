@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+  <content AgentID="1">
+    <CustomerName>John Williams</CustomerName>
+    <CustomersEmail>john@careerstructure.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  17:10</DateTime>
+    <ChatDuration>0 hour  -  26 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="2">
+    <CustomerName>Richard Millar</CustomerName>
+    <CustomersEmail>richard@flairtcrush.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:25</DateTime>
+    <ChatDuration>0 hour -  38 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="3">
+    <CustomerName>Robert Davis</CustomerName>
+    <CustomersEmail>robert@amorenlinea.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:05</DateTime>
+    <ChatDuration>0 hour  -  14 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="4">
+    <CustomerName>James Smith</CustomerName>
+    <CustomersEmail>james@microskif.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  15:10</DateTime>
+    <ChatDuration>0 hour  -  22 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="5">
+    <CustomerName>Charles Moore</CustomerName>
+    <CustomersEmail>charles@casualfriends.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  14:40</DateTime>
+    <ChatDuration>0 hour  -  16 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="6">
+    <CustomerName>John Williams</CustomerName>
+    <CustomersEmail>john@careerstructure.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  17:10</DateTime>
+    <ChatDuration>0 hour  -  26 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="7">
+    <CustomerName>Richard Millar</CustomerName>
+    <CustomersEmail>richard@flairtcrush.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:25</DateTime>
+    <ChatDuration>0 hour -  38 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="8">
+    <CustomerName>Robert Davis</CustomerName>
+    <CustomersEmail>robert@amorenlinea.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:05</DateTime>
+    <ChatDuration>0 hour  -  14 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="9">
+    <CustomerName>James Smith</CustomerName>
+    <CustomersEmail>james@microskif.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  15:10</DateTime>
+    <ChatDuration>0 hour  -  22 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="10">
+    <CustomerName>Charles Moore</CustomerName>
+    <CustomersEmail>charles@casualfriends.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  14:40</DateTime>
+    <ChatDuration>0 hour  -  16 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="11">
+    <CustomerName>John Williams</CustomerName>
+    <CustomersEmail>john@careerstructure.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  17:10</DateTime>
+    <ChatDuration>0 hour  -  26 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="12">
+    <CustomerName>Richard Millar</CustomerName>
+    <CustomersEmail>richard@flairtcrush.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:25</DateTime>
+    <ChatDuration>0 hour -  38 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+  <content AgentID="13">
+    <CustomerName>Robert Davis</CustomerName>
+    <CustomersEmail>robert@amorenlinea.com</CustomersEmail>
+    <ContactDetails>+1 123-456-7890</ContactDetails>
+    <DateTime>10/10/2016  -  16:05</DateTime>
+    <ChatDuration>0 hour  -  14 minutes</ChatDuration>
+    <View>
+      <![CDATA[<a class="linking"><i class="fi-eye"></i></a>]]>
+    </View>
+  </content>
+</entry>

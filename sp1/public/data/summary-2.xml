@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+  <content SummaryID="1">
+    <TotalAccounts>5000</TotalAccounts>
+    <TotalPaidAccounts>5000</TotalPaidAccounts>
+    <TrialAccounts>5000</TrialAccounts>
+    <BasicAccounts>5000</BasicAccounts>
+    <ProfessionalAccounts>5000</ProfessionalAccounts>
+	<EnterpriseAccounts>5000</EnterpriseAccounts>
+	<NonPaidAccounts>5000</NonPaidAccounts>
+	<CancelledAccounts>5000</CancelledAccounts>
+  </content>
+</entry>

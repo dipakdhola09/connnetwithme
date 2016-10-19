@@ -1,0 +1,52 @@
+<?php
+
+$email = $form->get('email');
+$email->setAttribute('class', 'form-control login-icon');
+$email->setAttribute('placeholder', 'Email');
+
+$password = $form->get('password');
+$password->setAttribute('class', 'form-control passcode-icon');
+$password->setAttribute('placeholder', 'Password');
+
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-default');
+?>
+<body class="login-bg">
+<div class="row login-box">
+	<div class="large-12 columns logo"> <a href="<?= $this->url('home') ?>" title="Connect with Me"><img src="images/logo.png" alt="Connect with Me" title="Connect with Me"></a> </div>
+	<div class="large-12 columns title-text p-20">User Login</div>
+        <?php if($this->flashMessenger()->hasMessages()) {?>
+    <span class="alert alert-danger col-sm-12 text-center">
+    <?php $messages = $this->flashMessenger()->getMessages();
+            foreach($messages as $message) {
+                echo $message;
+            }
+?>
+    </span>    
+        <?php } ?>
+	<div class="large-12 p-0">
+            <?php 
+		$form->setAttribute('action', $this->url('login', ['action' => 'checklogin']));
+                $form->setAttribute('class','larger-12');
+                $form->prepare();
+                echo $this->form()->openTag($form);
+?>
+			<div class="large-12 columns"><div class="form-group form-group-box">
+                                <?= $this->formElement($email) ?>
+                                <?= $this->formElementErrors()->render($email, ['class' => 'help-block']) ?>
+				</div></div>
+			<div class="large-12 columns"><div class="form-group form-group-box m-t-20">
+                                    <?=  $this->formElement($password) ?>
+                                    <?=  $this->formElementErrors()->render($password, ['class' => 'help-block']) ?>
+				<p class="text-right"><a href="<?= $this->url('forgotpassword') ?>" title="Forgot Password?">Forgot Password?</a></p>
+			</div></div>
+			<div class="large-12 columns">
+                            <div class="form-group cennter m-t-30"> 
+                                <?php echo $this->formSubmit($submit); ?>
+                            </div>
+                        </div>
+		<?php echo $this->form()->closeTag(); ?>
+	</div>
+</div>
+<script src="<?= $this->basepath('js/foundation.min.js') ?>"></script>
+</body>

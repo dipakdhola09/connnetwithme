@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+	<content AgentID="1">
+		<AgentName>Robert Davis</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>1 hour  -  20 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>15</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<ViewChats></ViewChats>
+		<Toggle></Toggle>
+	</content>
+	<content AgentID="2">
+		<AgentName>Richard Millar</AgentName>
+		<Department>Sales</Department>
+		<TimeOnline>3 hour  -  46 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>32</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>03</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+	    <ViewChats></ViewChats>
+		<Toggle></Toggle>
+	</content>
+	<content AgentID="3">
+		<AgentName>John Williams</AgentName>
+		<Department>Administrator</Department>
+		<TimeOnline>0 hour  -  24 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>06</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+    	<ViewChats></ViewChats>
+		<Toggle></Toggle>
+	</content>
+	<content AgentID="4">
+		<AgentName>James Smith</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>0 hour  -  59 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>00</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<ViewChats></ViewChats>
+		<Toggle></Toggle>
+	</content>
+	<content AgentID="5">
+		<AgentName>Charles Moore</AgentName>
+		<Department>Marketing</Department>
+		<TimeOnline>2 hour  -  16 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>12</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>02</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+    	<ViewChats></ViewChats>
+		<Toggle></Toggle>
+	</content>
+</entry>

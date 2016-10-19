@@ -1,0 +1,191 @@
+<div class="header-bg">
+    <div class="header-title">DASHBOARD</div>
+</div>
+<div class="side-menu show-for-small-only">
+    <ul>
+        <li class="dashboard"><a href="<?= $this->basePath('admin') ?>" title="">Dashboard</a></li>
+        <li class="active user-search"><a href="<?= $this->basePath('admin/userSearch') ?>" title="">User Search</a></li>
+        <li class="change-password"><a href="javascript:void(0)" title="">Change Password</a></li>
+        <li class="logout"><a href="javascript:void(0)" title="">Logout</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="search-box-bg">
+        <div class="search-box">
+            <input placeholder="Search Here" value="" class="form-control search" type="text">
+            <a href="javascript:void(0)">
+                <img src="<?= $this->basePath('images/search-icon.png') ?>" alt="" title="" class="search-icon">
+            </a> 
+        </div>
+    </div>
+    <div class="small-12 medium-12 large-12 columns p-0 m-t-20 m-b-20">
+        <div class="searched-results-bg columns">
+            <div class="searched-results-title">Searched Results</div>
+            <div class="searched-results small-12 medium-12 large-12 columns">
+                <div class="searched-results-row small-12 medium-12 large-12 columns text-center">
+                    <div class="title">free trial plan</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">Monthly Biling Amount</div>
+                    <div class="text-right">$129.99</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">Used Agents</div>
+                    <div class="text-right">3</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">Used SMS Mesges/Month</div>
+                    <div class="text-right">250</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">Next Billing Date</div>
+                    <div class="text-right">09/22/2016</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">Available Agents</div>
+                    <div class="text-right">0</div>
+                </div>
+                <div class="searched-results-row small-12 medium-12 large-4 columns">
+                    <div class="text-left">SMS Messages Left/Month</div>
+                    <div class="text-right">250</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center dashboard-title">AGENTS <span><a href="javascript:void(0)">Login as Manager</a></span></div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+        <div id="jqxgrid"> </div>
+    </div>
+    <div class="text-center dashboard-title">Billing History <span>&nbsp;</span></div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+        <div id="jqxgrid-1"> </div>
+    </div>
+
+</div>
+<footer>
+    <div class="row">
+        <div class="large-12 small-12 columns footer-text"> Copyright 2016 
+            <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a> •   All Rights Reserved </div>
+    </div>
+</footer>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script> 
+<script src="http://foundation.zurb.com/sites/docs/v/5.5.3/assets/js/modernizr.js"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcalendar.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdatetimeinput.js'); ?>"></script> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "../data/orders-1.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'AgentName', },
+                        {name: 'Department', },
+                        {name: 'TimeOnline', },
+                        {name: 'CompletedChats', },
+                        {name: 'CurrentChats', },
+                        {name: 'ViewChats', },
+                        {name: 'Toggle', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'AgentID',
+                    url: url,
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        // create jqxgrid.
+        $("#jqxgrid").jqxGrid({
+            width: '100%',
+            //height: 450,
+            autoheight: true,
+            //autorowheight:true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: true,
+            pageable: true,
+            showsortcolumnbackground: false,
+            filterable: true,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'Agent', datafield: 'AgentName', width: '20%'},
+                {text: 'Department', datafield: 'Department', width: '20%'},
+                {text: 'Time Online', datafield: 'TimeOnline', width: '16%'},
+                {text: 'Completed Chats', datafield: 'CompletedChats', width: '12%', cellsalign: 'center'},
+                {text: 'Current Chats', datafield: 'CurrentChats', width: '12%', cellsalign: 'center'},
+                {text: 'View Chats', datafield: 'ViewChats', width: '10%', cellsalign: 'center'},
+                {text: 'Toggle', datafield: 'Toggle', width: '10%', cellsalign: 'center'}
+            ]
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "../data/billing-history.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'Date', },
+                        {name: 'Amount', },
+                        {name: 'Status', },
+                        {name: 'LastDigitofCC', },
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'AgentID',
+                    url: url,
+                    //sortcolumn: 'AgentName',
+                    //sortdirection: 'asc'
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        // create jqxgrid.
+        $("#jqxgrid-1").jqxGrid({
+            width: '100%',
+            //height: 450,
+            autoheight: true,
+            //autorowheight:true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: true,
+            pageable: true,
+            showsortcolumnbackground: false,
+            filterable: true,
+            selectionmode: 'multiplecellsadvanced',
+            altrows: true,
+            columns: [
+                {text: 'Date', datafield: 'Date', width: '25%'},
+                {text: 'Amount', datafield: 'Amount', width: '25%'},
+                {text: 'Status', datafield: 'Status', width: '25%'},
+                {text: 'Last 4 Digit of CC', datafield: 'LastDigitofCC', width: '25%'}
+            ]
+        });
+    });
+
+</script>

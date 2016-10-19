@@ -1,0 +1,255 @@
+<div class="header-bg">
+    <div class="header-title">CURRENT AGENTS</div>
+</div>
+<div class="side-menu show-for-small-only">
+    <ul>
+        <li class="stats"><a href="<?= $this->basePath('manager'); ?>" title="">Stats</a></li>
+        <li class="curr-chat"><a href="current-chat.html" title="">Current Chats</a></li>
+        <li class="active agent-setup"><a href="<?= $this->basePath('manager/agentSetup'); ?>" title="">Agent Setup</a></li>
+        <li class="chat-setup"><a href="<?= $this->basePath('manager/chatSetup'); ?>" title="">Chat Setup</a></li>
+        <li class="chat-design"><a href="<?= $this->basePath('manager/chatDesign'); ?>" title="">Chat Design</a></li>
+        <li class="report"><a href="javascript:void(0)" title="">Reports</a></li>
+        <li class="account"><a href="<?= $this->basePath('manager/accountSettings'); ?>" title="">Accounts</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class='default'>
+        <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+            <div id="jqxgrid"> </div>
+        </div>
+    </div>
+    <div class="row" style="width:auto">
+        <div class="large-4 columns">
+            <div class="create-agent-bg columns">
+                <div class="add-agent-title">Create Agent</div>
+                <form class="small-12 columns p-0">
+                    <div class="large-6 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="First Name" value="" class="form-control name-icon" type="text">
+                        </div>
+                    </div>
+                    <div class="large-6 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="Last Name" value="" class="form-control name-icon" type="text">
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="Email Address" value="" class="form-control login-icon" type="email">
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <div class="select-control-box employee-icon">
+                                <div class="select">
+                                    <select class="s-hidden">
+                                        <option>Department</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <div class="large-12 small-12 columns p-0 upload-agent-image">
+                                <input placeholder="Upload Agent Image" value="" class="form-control upload-agent-image-icon" type="email">
+                                <a href="#" title="" class="btn upload-agent-image-btn">Browse</a> </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group cennter m-t-30 m-b-30"> <a href="#" title="" class="btn btn-default">ADD AGENT</a> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="large-8 columns">
+            <div class="agent-setting-bg columns">
+                <div class="add-agent-title">Agent Settings &amp; Distribution</div>
+                <form class="small-12 columns p-0">
+                    <div class="large-12 columns bg-1">
+                        <div class="large-9 columns text-1"> Maximum number of chats agent can have concurrent </div>
+                        <div class="large-3 columns">
+                            <div class="form-group">
+                                <input placeholder="" value="" class="form-control" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns bg-2">
+                        <div class="large-9 columns text-1"> Agents can re-assign chats to other department / manager </div>
+                        <div class="large-3 columns">
+                            <div class="select-control-box">
+                                <select >
+                                    <option>Yes</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns bg-1">
+                        <div class="large-9 columns text-1"> Agents can pull chats from queue </div>
+                        <div class="large-3 columns">
+                            <div class="select-control-box">
+                                <select >
+                                    <option>Yes</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns bg-2">
+                        <div class="large-9 columns text-1"> Chats evenly distributed to all available agents</div>
+                        <div class="large-3 columns">
+                            <div class="select-control-box">
+                                <select >
+                                    <option>Yes</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns bg-1">
+                        <div class="large-9 columns text-1"> Time before chat is redistributed if not answered by agent </div>
+                        <div class="large-3 columns">
+                            <div class="form-group">
+                                <div class="select-control-box">
+                                    <select>
+                                        <option>3 Minutes</option>
+                                        <option>5 Minutes</option>
+                                        <option>7 Minutes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group cennter m-t-30 m-b-30"> <a href="#" title="" class="btn btn-default">SUBMIT</a> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="large-12 small-12 columns footer-text"> Copyright 2016 <a href="index.html" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a> •   All Rights Reserved </div>
+    </div>
+</footer>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script>
+<script src="http://foundation.zurb.com/sites/docs/v/5.5.3/assets/js/modernizr.js"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = "../data/orders.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'AgentName', },
+                        {name: 'Department', },
+                        {name: 'TimeOnline', },
+                        {name: 'CompletedChats', },
+                        {name: 'CurrentChats', },
+                        {name: 'Available', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'AgentID',
+                    url: url,
+                    //sortcolumn: 'AgentName',
+                    //sortdirection: 'asc'
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        // create jqxgrid.
+        $("#jqxgrid").jqxGrid({
+            width: '100%',
+            //height: 450,
+            autoheight: true,
+            //autorowheight:true,
+            columnsheight: 50,
+            rowsheight: 50,
+            pagerheight: 50,
+            source: dataAdapter,
+            sortable: true,
+            pageable: true,
+            showsortcolumnbackground: false,
+            filterable: true,
+            altrows: true,
+            columns: [
+                {text: 'Agent', datafield: 'AgentName', width: '25%'},
+                {text: 'Department', datafield: 'Department', width: '25%'},
+                {text: 'Time Online', datafield: 'TimeOnline', width: '16%'},
+                {text: 'Completed Chats', datafield: 'CompletedChats', width: '12%', cellsalign: 'center'},
+                {text: 'Current Chats', datafield: 'CurrentChats', width: '12%', cellsalign: 'center'},
+                {text: 'Available', datafield: 'Available', width: '10%', cellsalign: 'center'}
+            ]
+        });
+    });
+
+</script> 
+<script type="text/javascript">
+    $('select').each(function () {
+        var $this = $(this),
+                numberOfOptions = $(this).children('option').length;
+        $this.addClass('s-hidden');
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="styledSelect"></div>');
+        var $styledSelect = $this.next('div.styledSelect');
+        $styledSelect.text($this.children('option').eq(0).text());
+        var $list = $('<ul />', {
+            'class': 'options'
+        }).insertAfter($styledSelect);
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+        var $listItems = $list.children('li');
+        $styledSelect.click(function (e) {
+            e.stopPropagation();
+            $('div.styledSelect.active').each(function () {
+                $(this).removeClass('active').next('ul.options').hide();
+            });
+            $(this).toggleClass('active').next('ul.options').toggle();
+        });
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('href'));
+            $list.hide();
+        });
+        $(document).click(function () {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    });
+</script>

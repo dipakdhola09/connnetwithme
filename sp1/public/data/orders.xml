@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+	<content AgentID="1">
+		<AgentName>Robert Davis</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>1 hour  -  20 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>15</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch1" type="checkbox"><label for="exampleCheckboxSwitch1"></label></div>]]></Available>
+	</content>
+	<content AgentID="2">
+		<AgentName>Richard Millar</AgentName>
+		<Department>Sales</Department>
+		<TimeOnline>3 hour  -  46 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>32</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>03</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input id="exampleCheckboxSwitch2" type="checkbox"><label for="exampleCheckboxSwitch2"></label></div>]]></Available>
+	</content>
+	<content AgentID="3">
+		<AgentName>John Williams</AgentName>
+		<Department>Administrator</Department>
+		<TimeOnline>0 hour  -  24 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>06</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch3" type="checkbox"><label for="exampleCheckboxSwitch3"></label></div>]]></Available>
+	</content>
+	<content AgentID="4">
+		<AgentName>James Smith</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>0 hour  -  59 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>00</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch4" type="checkbox"><label for="exampleCheckboxSwitch4"></label></div>]]></Available>
+	</content>
+	<content AgentID="5">
+		<AgentName>Charles Moore</AgentName>
+		<Department>Marketing</Department>
+		<TimeOnline>2 hour  -  16 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>12</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>02</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input id="exampleCheckboxSwitch5" type="checkbox"><label for="exampleCheckboxSwitch5"></label></div>]]></Available>
+	</content>
+	<content AgentID="6">
+		<AgentName>Robert Davis</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>1 hour  -  20 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>15</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch6" type="checkbox"><label for="exampleCheckboxSwitch6"></label></div>]]></Available>
+	</content>
+	<content AgentID="7">
+		<AgentName>Richard Millar</AgentName>
+		<Department>Sales</Department>
+		<TimeOnline>3 hour  -  46 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>32</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>03</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input id="exampleCheckboxSwitch7" type="checkbox"><label for="exampleCheckboxSwitch7"></label></div>]]></Available>
+	</content>
+	<content AgentID="8">
+		<AgentName>John Williams</AgentName>
+		<Department>Administrator</Department>
+		<TimeOnline>0 hour  -  24 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>06</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch8" type="checkbox"><label for="exampleCheckboxSwitch8"></label></div>]]></Available>
+	</content>
+	<content AgentID="9">
+		<AgentName>James Smith</AgentName>
+		<Department>Customer Service</Department>
+		<TimeOnline>0 hour  -  59 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>01</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>00</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input checked id="exampleCheckboxSwitch9" type="checkbox"><label for="exampleCheckboxSwitch9"></label></div>]]></Available>
+	</content>
+	<content AgentID="10">
+		<AgentName>Charles Moore</AgentName>
+		<Department>Marketing</Department>
+		<TimeOnline>2 hour  -  16 minutes</TimeOnline>
+		<CompletedChats><![CDATA[<span>12</span> <a class="linking"><i class="fi-eye"></i></a>]]></CompletedChats>
+		<CurrentChats><![CDATA[<span>02</span> <a class="linking"><i class="fi-eye"></i></a>]]></CurrentChats>
+		<Available><![CDATA[<div class="switch round tiny"><input id="exampleCheckboxSwitch10" type="checkbox"><label for="exampleCheckboxSwitch10"></label></div>]]></Available>
+	</content>
+</entry>

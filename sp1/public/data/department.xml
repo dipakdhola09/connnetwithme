@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+	<content AgentID="1">
+		<Department>Customer Service</Department>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+	<content AgentID="2">
+		<Department>Sales</Department>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+	<content AgentID="3">
+		<Department>Administrator</Department>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+</entry>

@@ -1,0 +1,607 @@
+
+<div class="header-bg">
+    <div class="header-title">CURRENT AGENTS</div>
+</div>
+<div class="side-menu show-for-small-only">
+    <ul>
+        <li class="stats"><a href="<?= $this->basePath('manager'); ?>" title="">Stats</a></li>
+        <li class="curr-chat"><a href="<?= $this->basePath('manager/allChat'); ?>" title="">Current Chats</a></li>
+        <li class="agent-setup"><a href="<?= $this->basePath('manager/agentSetup'); ?>" title="">Agent Setup</a></li>
+        <li class="chat-setup"><a href="<?= $this->basePath('manager/chatSetup'); ?>" title="">Chat Setup</a></li>
+        <li class="chat-design"><a href="<?= $this->basePath('manager/chatDesign'); ?>" title="">Chat Design</a></li>
+        <li class="report"><a href="javascript:void(0)" title="">Reports</a></li>
+        <li class="active account"><a href="<?= $this->basePath('manager/accountSettings'); ?>" title="">Accounts</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="row" style="width:auto">
+        <div class="large-12 columns">
+            <div class="large-5 medium-12 columns p-0">
+                <ul class="tabs" data-tabs id="myaccount-setting-tabs">
+                    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Plan</a></li>
+                    <li class="tabs-title"><a href="#panel2">Billing Info</a></li>
+                    <li class="tabs-title"><a href="#panel3">Settings</a></li>
+                </ul>
+            </div>
+            <div class="large-12 columns p-0">
+                <div class="tabs-content myaccount-setting-tabs" data-tabs-content="myaccount-setting-tabs">
+                    <div class="tabs-panel is-active" id="panel1">
+                        <div class="large-5 medium-12 small-12 columns p-0 m-b-20">
+                            <div class="myaccount-setting-tab-1 columns">
+                                <div class="large-12 medium-12 small-12 columns p-0">
+                                    <form class="large-12">
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control city-icon" value="" placeholder="Company Name">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control address-icon" value="" placeholder="Company Address 1">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control address-icon" value="" placeholder="Company Address 2">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box country-icon">
+                                                    <select>
+                                                        <option>Country</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control zipcode-icon" value="" placeholder="Zip Code">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box state-icon">
+                                                    <select>
+                                                        <option>State</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box city-icon">
+                                                    <select>
+                                                        <option>City</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group cennter m-t-30 m-b-10"> 
+                                                <a class="btn btn-default" title="" href="register-thank-you.html">Save</a> 
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large-7 medium-12 small-12 columns small-p-none m-b-20">
+                            <div class="create-customer-plan-bg columns">
+                                <div class="customer-plan-title">Current Plan</div>
+                                <div class="large-12 columns current-plan-details">
+                                    <div class="plan-details-box">
+                                        <div class="plan-title">Enterprise:</div>
+                                        <div class="large-12 columns ac-plan-text-box">
+                                            <p><strong>4 Agents</strong> - 
+                                                <a href="#" title="Add additional agents for $30/month each">Add additional agents for $30/month each</a>
+                                            </p>
+                                            <p>Unlimited Live Chat</p>
+                                            <p><strong>178</strong> / 3000 SMS <strong>Messages Used</strong></p>
+                                            <p>Additional SMS: <strong>$14.99 for 50 SMS Messages</strong> - 
+                                                <a href="#" title="Add On">Add On</a>
+                                            </p>
+                                            <p>Billing Credit Card: <strong>VISA</strong> ending with <strong>5678</strong> - 
+                                                <a href="#" title="Update Credit Card Info">Update Credit Card Info</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="billing-data-box">
+                                        <div class="large-6 columns billing-data-left">Next Billing Date <strong>08/25/2016</strong></div>
+                                        <div class="large-6 columns billing-data-right">Billing Amount <strong>$189.99</strong></div>
+                                    </div>
+                                    <div class="billing-option-text"> Alternate display, if they have a package other than enterprise </div>
+                                    <div class="large-12 column sub-package-details">
+                                        <div class="row">
+                                            <div class="large-6 column m-b-10">
+                                                <div class="customer-plan-title">Current Plan</div>
+                                                <div class="large-12 columns current-plan-details">
+                                                    <div class="plan-details-box">
+                                                        <div class="plan-title">Basic:</div>
+                                                        <div class="large-12 columns ac-plan-text-box">
+                                                            <p><strong>4 Agents</strong> - 
+                                                                <a href="#" title="Add additional agents for $30/month each">Add additional agents for $30/month each</a>
+                                                            </p>
+                                                            <p>Unlimited Live Chat</p>
+                                                            <p><strong>178</strong> / 3000 SMS <strong>Messages Used</strong></p>
+                                                            <p>Additional SMS: <strong>$14.99 for 50 SMS Messages</strong> - 
+                                                                <a href="#" title="Add On">Add On</a>
+                                                            </p>
+                                                            <p>Billing Credit Card: <strong>VISA</strong> ending with <strong>5678</strong> - 
+                                                                <a href="#" title="Update Credit Card Info">Update Credit Card Info</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="billing-data-box">
+                                                        <div class="large-6 columns billing-data-left">Next Billing Date <strong>08/25/2016</strong></div>
+                                                        <div class="large-6 columns billing-data-right">Billing Amount <strong>$189.99</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="large-6 column m-b-10">
+                                                <div class="customer-plan-title">Next Plan</div>
+                                                <div class="large-12 columns current-plan-details">
+                                                    <div class="plan-details-box">
+                                                        <div class="plan-title">Professional::</div>
+                                                        <div class="large-12 columns ac-plan-text-box">
+                                                            <p><strong>4 Agents</strong> - 
+                                                                <a href="#" title="Add additional agents for $30/month each">Add additional agents for $30/month each</a>
+                                                            </p>
+                                                            <p>Unlimited Live Chat</p>
+                                                            <p><strong>178</strong> / 3000 SMS <strong>Messages Used</strong></p>
+                                                            <p>Additional SMS: <strong>$14.99 for 50 SMS Messages</strong> - 
+                                                                <a href="#" title="Add On">Add On</a>
+                                                            </p>
+                                                            <p>Billing Credit Card: <strong>VISA</strong> ending with <strong>5678</strong> - 
+                                                                <a href="#" title="Update Credit Card Info">Update Credit Card Info</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="billing-data-box">
+                                                        <div class="large-6 columns billing-data-left">Next Billing Date <strong>08/25/2016</strong></div>
+                                                        <div class="large-6 columns billing-data-right">Billing Amount <strong>$189.99</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-panel" id="panel2">
+                        <div class="large-5 columns p-0">
+                            <div class="myaccount-setting-tab-2 columns">
+                                <div class="large-12 bc-info-text columns">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="checkbox-inline">
+                                                <input class="checkbox-inline" name="select-form" type="radio" value="Update billing info onlyUpdate billing info only">
+                                                Update billing info only</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="checkbox-inline">
+                                                <input class="checkbox-inline" name="select-form" type="radio" value="Add SMS Package (500 SMS for $14.99)" >
+                                                Add SMS Package (500 SMS for $14.99)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="checkbox-inline">
+                                                <input class="checkbox-inline" name="select-form" type="radio" value="Change">
+                                                Change</label>
+                                        </div>
+                                        <div class="sub-form-group p-l-15">
+                                            <div class="form-group">
+                                                <label class="checkbox-inline">
+                                                    <input class="checkbox-inline" name="sub-select-form"  type="radio" value="Basic Plan for $x.xx credit and $69.99/month starting Next Billing Date xx/xx/xx">
+                                                    <span>
+                                                        <strong>Basic</strong> Plan for $x.xx credit and 
+                                                        <strong>$69.99/month</strong> starting Next Billing Date xx/xx/xx
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="checkbox-inline">
+                                                    <input class="checkbox-inline" name="sub-select-form" type="radio" value="Professional Plan for $x.xx credit and $129.99/month starting Next Billing Date xx/xx/xx">
+                                                    <span>
+                                                        <strong>Professional Plan</strong> for $x.xx credit and 
+                                                        <strong>$129.99/month</strong> starting Next Billing Date xx/xx/xx
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="checkbox-inline">
+                                                    <input class="checkbox-inline" name="sub-select-form" type="radio" value="Business Plan for $x.xx credit and $159.99/month starting Next Billing Date xx/xx/xx">
+                                                    <span>
+                                                        <strong>Business Plan</strong> for $x.xx credit and 
+                                                        <strong>$159.99/month</strong> starting Next Billing Date xx/xx/xx
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="checkbox-inline">
+                                                    <input class="checkbox-inline" name="sub-select-form" type="radio" value="Enterprise Plan">
+                                                    <strong>Enterprise Plan</strong></label>
+                                                <div class="large-12 plan-text columns">
+                                                    <div class="large-2 plan-text-select columns">
+                                                        <select>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <span>No. of agents needed</span>
+                                                    <p>This change will cost $x.xx today, and $xxx.xx/month starting Next Billing Date xx/xx/xx</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="large-12 ba-column-bg columns">
+                                    <div class="large-12 ba-column-1 columns">Total billing amount for today: <strong>$49.99</strong></div>
+                                    <div class="large-12 ba-column-2 columns">Your billing date will remain the <strong>X</strong> of the month</div>
+                                    <div class="large-12 ba-column-3 columns">Starting XX/XX/XX you will be billed <strong>$X.XX</strong> each month</div>
+                                </div>
+                                <div class="large-12 columns">
+                                    <p class="float-center">
+                                        <input class="checkbox-inline" name="select-form" type="checkbox" value="Change">
+                                        I agree to these new charges and wish to change my plan</p>
+                                </div>
+                                <div class="large-12 columns p-0">
+                                    <form class="large-12">
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control name-icon" value="" placeholder="Full Name">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control address-icon" value="" placeholder="Address 1">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control address-icon" value="" placeholder="Address 2">
+                                            </div>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box city-icon">
+                                                    <select>
+                                                        <option>City</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box state-icon">
+                                                    <select>
+                                                        <option>State</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box country-icon">
+                                                    <select>
+                                                        <option>Country</option>
+                                                        <option>Option 1</option>
+                                                        <option>Option 2</option>
+                                                        <option>Option 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control zipcode-icon" value="" placeholder="Zip Code">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns m-t-20">
+                                            <hr>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box">
+                                                <input type="text" class="form-control creditcard-icon" value="" placeholder="Credit Card Number">
+                                            </div>
+                                        </div>
+                                        <div class="large-5 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box expiry-icon">
+                                                    <select>
+                                                        <option>Expiry month</option>
+                                                        <option>01</option>
+                                                        <option>02</option>
+                                                        <option>03</option>
+                                                        <option>04</option>
+                                                        <option>05</option>
+                                                        <option>06</option>
+                                                        <option>07</option>
+                                                        <option>08</option>
+                                                        <option>09</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-4 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <div class="select-control-box expiry-icon">
+                                                    <select>
+                                                        <option>Year</option>
+                                                        <option>2016</option>
+                                                        <option>2017</option>
+                                                        <option>2018</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-3 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control cvv-icon" value="" placeholder="CVV">
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group form-group-box m-t-20">
+                                                <input type="text" class="form-control name-icon" value="" placeholder="Name on Card">
+                                                <p class="float-center">Your credit card will be billed by CWM</p>
+                                            </div>
+                                        </div>
+                                        <div class="large-12 columns">
+                                            <div class="form-group cennter m-t-30 m-b-10"> 
+                                                <a class="btn btn-default" title="" href="register-thank-you.html">Submit</a> 
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-panel" id="panel3">
+                        <div class="large-5 columns p-0">
+                            <div class="agent-setting-bg  myaccount-setting-tab-3 columns">
+                                <form class="small-12 columns p-0">
+                                    <div class="large-12 columns columns-title">Account Settings:</div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Current Traffic Stats</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns">
+                                            <a href="#" title="">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="large-12 columns bg-1">
+                                        <div class="large-9 columns text-1">Proactive Campaigns</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns">
+                                            <a href="#" title=""><i class="fa fa-pencil"></i>
+                                            </a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Customers can select SMS (Text Messages)</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns columns-title">Agent Settings:</div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Maximum number of chat agents can have concurrent</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>3</option>
+                                                    <option>2</option>
+                                                    <option>1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-1">
+                                        <div class="large-9 columns text-1">Agents can re-assign chats to other Department / Manager</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Agents can pull chats from queue</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-1">
+                                        <div class="large-9 columns text-1">Agents can see their own daily status</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Agents can see their own monthly status</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-1">
+                                        <div class="large-9 columns text-1">Agents can maintain pre-completed answers</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-9 columns text-1">Chats evenly distributed to all available agents</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-1">
+                                        <div class="large-9 columns text-1">Chats distributed based on URL customer is on</div>
+                                        <div class="large-2 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>Yes</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns bg-2">
+                                        <div class="large-8 columns text-1">Time before chat is redistributed if not answered by Agent</div>
+                                        <div class="large-3 columns">
+                                            <div class="form-group">
+                                                <select class="s-hidden">
+                                                    <option>3 minutes</option>
+                                                    <option>5 minutes</option>
+                                                    <option>10 minutes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="large-1 edit-btn columns"><a href="#" title=""><i class="fa fa-pencil"></i></a></div>
+                                    </div>
+                                    <div class="large-12 columns">
+                                        <div class="form-group cennter m-t-30 m-b-30"> <a href="#" title="" class="btn btn-default">Save</a> </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="row">
+        <div class="large-12 small-12 columns footer-text"> Copyright 2016 <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a> •   All Rights Reserved </div>
+    </div>
+</footer>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script>
+<script type="text/javascript">
+    $('select').each(function () {
+        var $this = $(this),
+                numberOfOptions = $(this).children('option').length;
+        $this.addClass('s-hidden');
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="styledSelect"></div>');
+        var $styledSelect = $this.next('div.styledSelect');
+        $styledSelect.text($this.children('option').eq(0).text());
+        var $list = $('<ul />', {
+            'class': 'options'
+        }).insertAfter($styledSelect);
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+        var $listItems = $list.children('li');
+        $styledSelect.click(function (e) {
+            e.stopPropagation();
+            $('div.styledSelect.active').each(function () {
+                $(this).removeClass('active').next('ul.options').hide();
+            });
+            $(this).toggleClass('active').next('ul.options').toggle();
+        });
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('href'));
+            $list.hide();
+        });
+        $(document).click(function () {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    });
+</script> 
+<script>
+    $(document).foundation();
+</script>

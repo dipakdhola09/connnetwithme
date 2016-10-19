@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+	<content ChatQueue="1">
+		<CustomerName>John Williams</CustomerName>
+		<CustomersEmailID>john@careerstructure.com</CustomersEmailID>
+		<ContactDetails>+1 123-456-7890</ContactDetails>
+		<QueueTime>20 minutes</QueueTime>
+		<StartChat>
+			<![CDATA[<div class="switch round tiny"><a class="btn btn-default" title="" href="#">Start Chat</a></div>]]>
+		</StartChat>
+	</content>
+	<content ChatQueue="2">
+		<CustomerName>John Williams</CustomerName>
+		<CustomersEmailID>john@careerstructure.com</CustomersEmailID>
+		<ContactDetails>+1 123-456-7890</ContactDetails>
+		<QueueTime>20 minutes</QueueTime>
+		<StartChat>
+			<![CDATA[<div class="switch round tiny"><a class="btn btn-default" title="" href="#">Start Chat</a></div>]]>
+		</StartChat>
+	</content>
+	<content ChatQueue="3">
+		<CustomerName>John Williams</CustomerName>
+		<CustomersEmailID>john@careerstructure.com</CustomersEmailID>
+		<ContactDetails>+1 123-456-7890</ContactDetails>
+		<QueueTime>20 minutes</QueueTime>
+		<StartChat>
+			<![CDATA[<div class="switch round tiny"><a class="btn btn-default" title="" href="#">Start Chat</a></div>]]>
+		</StartChat>
+	</content>
+	<content ChatQueue="4">
+		<CustomerName>John Williams</CustomerName>
+		<CustomersEmailID>john@careerstructure.com</CustomersEmailID>
+		<ContactDetails>+1 123-456-7890</ContactDetails>
+		<QueueTime>20 minutes</QueueTime>
+		<StartChat>
+			<![CDATA[<div class="switch round tiny"><a class="btn btn-default" title="" href="#">Start Chat</a></div>]]>
+		</StartChat>
+	</content>
+	<content ChatQueue="5">
+		<CustomerName>John Williams</CustomerName>
+		<CustomersEmailID>john@careerstructure.com</CustomersEmailID>
+		<ContactDetails>+1 123-456-7890</ContactDetails>
+		<QueueTime>20 minutes</QueueTime>
+		<StartChat>
+			<![CDATA[<div class="switch round tiny"><a class="btn btn-default" title="" href="#">Start Chat</a></div>]]>
+		</StartChat>
+	</content>
+	
+</entry>

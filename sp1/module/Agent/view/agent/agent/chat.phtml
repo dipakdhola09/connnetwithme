@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Connect With me...</title>
+        <link rel="icon" href="<?= $this->basePath('images/favicon.png')?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="<?= $this->basePath('css/docs.css')?>">
+        <link rel="stylesheet" href="<?= $this->basePath('css/foundation.min.css') ?>">
+        <link rel="stylesheet" href="<?= $this->basePath('css/font-awesome.min.css') ?>">
+        <link rel="stylesheet" href="<?= $this->basePath('css/style.css') ?>">
+    </head>
+    <body class="login-bg">
+<div class="chat-box">
+    <div class="step-1"><a href="javascript:void(0)" onClick="step_one()" title="" class="button radius text-normal">Talk to Me... :) 
+            <img src="<?= $this->basePath('images/chat.png')?>" alt="" title="" class="m-l-40">
+        </a>
+    </div>
+    <div class="step-2">
+        <div class="chat-box-type-1">
+            <div class="chat-box-type-1-header">
+                <div class="large-6 columns">Connect with Me</div>
+                <div class="large-6 columns text-right">Agents Online 
+                    <img src="<?= $this->basePath('images/online-yes.png')?>" class="p-l-5" alt="" title="">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-content">            	
+                <form class="large-12 columns">
+                    <div class="large-6 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="First Name" value="" class="form-control name-icon" type="text">
+                        </div>
+                    </div>
+                    <div class="large-6 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="Last Name" value="" class="form-control name-icon" type="text">
+                        </div>
+                    </div>                    
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <input placeholder="Email Address" value="" class="form-control login-icon" type="email">
+                        </div>
+                    </div>                    
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box m-t-20">
+                            <div class="large-9 small-9 columns p-0">
+                                <input placeholder="Phone No" value="" class="form-control phone-icon" type="text">
+                            </div>
+                            <div class="large-3 small-3 columns p-0 ext-form-control">
+                                <input placeholder="Ext." value="" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="large-12 columns">
+                        <div class="form-group form-group-box form-group-textarea-box m-t-20">
+                            <textarea class="form-control name-icon" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="large-12 columns">
+                        <div class="form-group cennter m-t-20 m-b-10"> 
+                            <a href="javascript:void(0)" onClick="step_two()" title="" class="button small radius">START CHAT</a> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="step-3">
+        <div class="chat-box-type-1">
+            <div class="chat-box-type-1-header">
+                <div class="large-6 columns">Connect with Me</div>
+                <div class="large-6 columns text-right">Agents Online 
+                    <img src="<?= $this->basePath('images/online-yes.png')?>" class="p-l-5" alt="" title="">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-content">
+                <div class="small-12 columns comment-box p-0 m-b-10">
+                    <div class="small-3 columns l-name">&nbsp;</div>
+                    <div class="small-6 columns comments r-arrow">Hello, I need help with XYZ</div>
+                    <div class="small-3 columns r-name">Robert</div>
+                </div>                
+                <div class="small-12 columns">
+                    <div class="alert alert-box alert-radius">You are in queue. Your queue no, is 
+                        <span>&ldquo;3&rdquo;</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-footer">
+                <form class="">
+                    <div class="large-12 columns">
+                        <input class="form-control radius pull-left" type="text">
+                        <a class="button radius small v-middle m-r-10" onClick="step_four()">Send</a>
+                        <a href="javascript:void(0)" onClick="step_five()">
+                            <img src="<?= $this->basePath('images/phone.png')?>" alt="" title="">
+                        </a>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="step-4">
+        <div class="chat-box-type-1">
+            <div class="chat-box-type-2-header">
+                <div class="large-3 columns">
+                    <figure class="image-circle">
+                        <img src="<?= $this->basePath('images/agent.jpg')?>" alt="" title="">
+                    </figure>
+                </div>
+                <div class="large-9 columns agent-details">
+                    <div><span>Agents</span> :  James</div>
+                    <div><span>Department</span> :  Customer Service</div>
+                    <div><span>Page on Site</span> :  Title of the page customer was on</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-content p-t-20 p-b-20">
+                <div class="small-12 columns comment-box p-0 m-b-10">
+                    <div class="small-3 columns l-name">&nbsp;</div>
+                    <div class="small-6 columns comments r-arrow">Hello, I need help with XYZ</div>
+                    <div class="small-3 columns r-name">Robert</div>
+                </div>
+                <div class="small-12 columns comment-box p-0 m-b-10">
+                    <div class="small-3 columns l-name">James</div>
+                    <div class="small-6 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                    <div class="small-3 columns r-name">&nbsp;</div>
+                </div>
+                <div class="small-12 columns comment-box p-0 m-b-10">
+                    <div class="small-3 columns l-name">&nbsp;</div>
+                    <div class="small-6 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                    <div class="small-3 columns r-name">Robert</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-footer">
+                <form class="">
+                    <div class="small-12 columns">
+                        <input class="form-control radius pull-left" type="text">
+                        <a class="button radius small v-middle m-r-10">Send</a>
+                        <a href="javascript:void(0)" onClick="step_five()">
+                            <img src="<?= $this->basePath('images/phone.png')?>" alt="" title="">
+                        </a>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="step-5">
+        <div class="chat-box-type-1">
+            <div class="chat-box-type-2-header">
+                <div class="large-12 columns m-b-10">
+                    <figure class="image-circle-large">
+                        <img src="<?= $this->basePath('images/agent.jpg')?>" alt="" title="">
+                    </figure>
+                </div>
+                <div class="large-10 large-offset-2 columns agent-details">
+                    <div><span>Agents</span> :  James</div>
+                    <div><span>Department</span> :  Customer Service</div>
+                    <div><span>Page on Site</span> :  Title of the page customer was on</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-2-content p-t-20 p-b-20">
+                <div class="chat-box-type-2-content-in">
+                    <p>Are you on your cell phone or want to walk away from your computer but want to continue this chat with us?</p>
+                    <p>Enter your cell phone number below and click “TEXT ME BACK” and our next reply will be sent to your SMS program on your cell phone. Our conversation can continue there.</p>
+                    <div>
+                        <form class="chat-footer">
+                            <input class="form-control radius" type="text">
+                            <a href="javascript:void(0)" class="button small radius">Text Me Back</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="chat-box-type-1-footer p-b-15">
+                <div class="large-12 columns text-center">
+                    <a class="button small radius" href="javascript:void(0)" onClick="back_step()">Back to Chat</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<?= $this->basePath('js/jquery-1.12.3.min.js')?>"></script>
+<script src="<?= $this->basePath('js/foundation.min.js')?>"></script>
+<script type="text/javascript">
+                        $('.step-2').hide();
+                        $('.step-3').hide();
+                        $('.step-4').hide();
+                        $('.step-5').hide();
+                        function step_one() {
+                            $('.step-1').hide();
+                            $('.step-2').show();
+                        }
+                        function step_two() {
+                            $('.step-2').hide();
+                            $('.step-3').show();
+                        }
+                        function step_four() {
+                            $('.step-4').show();
+                            $('.step-3').hide();
+                        }
+                        function step_five() {
+                            $('.step-5').show();
+                            $('.step-3').hide();
+                            $('.step-4').hide();
+                        }
+                        function back_step() {
+                            $('.step-5').hide();
+                            $('.step-4').show();
+                        }
+</script>
+ </body>
+</html>

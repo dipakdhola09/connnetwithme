@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<entry>
+	<content AgentID="1">
+		<Campaign>Auto Response</Campaign>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<ActionRequired>Yes</ActionRequired>
+		<ChatText>Thanks for reaching out. We will be right..</ChatText>		
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+	<content AgentID="2">
+		<Campaign>Auto Response</Campaign>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<ActionRequired>No</ActionRequired>
+		<ChatText>Hello there, and welcome to the one and ..</ChatText>		
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+	<content AgentID="3">
+		<Campaign>Campaign</Campaign>
+		<URL>https://www.connectwithme.com/pricing/</URL>
+		<ActionRequired>No</ActionRequired>
+		<ChatText>Something else to note about our text chat...</ChatText>		
+		<EditDelete><![CDATA[<a class="linking"><i class="fi-pencil"></i></a>&nbsp;&nbsp;<a class="linking"><i class="fi-trash"></i></a>]]></EditDelete>
+	</content>
+</entry>
