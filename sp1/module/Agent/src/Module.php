@@ -22,6 +22,19 @@ class Module implements ConfigProviderInterface {
                         $container->get(Model\AgentTable::class)
                     );
                 },
+                        
+                 'Chat\Model\ChatTable' =>  function($container) {
+                    $tableGateway = $container->get('ChatTableGateway');
+                    $table = new ChattTable($tableGateway);
+                    return $table;
+                },
+                        
+                'ChatTableGateway' => function ($container) {
+                    $dbAdapter = $container->get('Zend\Db\Adapter\Adapter');
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Chat());
+                    return new TableGateway('chat', $dbAdapter, null, $resultSetPrototype);
+                },
             ],
         ];
     }

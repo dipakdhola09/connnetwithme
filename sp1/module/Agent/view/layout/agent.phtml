@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('Connect With me.. Agent.')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('Live Support... Agent.')->setSeparator(' - ')->setAutoEscape(false) ?>
         <?=
                 $this->headMeta()
                 ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -44,14 +44,16 @@
                 <div class="large-10 small-12 columns main-content grey-bg p-0">
                     <div class="blue-bg text-right p-5">
                         <span class="user">
+                            <?php $this->session=new \Zend\Session\Container('base');?>
                             <span><img src="<?= $this->basePath('images/user.png'); ?>" alt="" title=""></span>
-                            <span>Welcome<strong>John Millar</strong></span>
+                            <span>Welcome<strong><?php echo $this->session->offsetGet('first_name'); ?> <?php echo $this->session->offsetGet('last_name'); ?> </strong></span>
                         </span>
-                        <span class="login-logout"><a href="#" class="logout">Logout</a></span>
+                        <span class="login-logout"><a href="<?= $this->url('login',['action' => 'logout']) ?>" class="logout">Logout</a></span>
                     </div>
                     <?= $this->content ?>
                 </div>
             </div>
         </div>
     </body>
+    
 </html>

@@ -1,0 +1,114 @@
+<?php
+
+$email = $form->get('email');
+$email->setAttribute('class', 'form-control login-icon');
+$email->setAttribute('placeholder', 'Email');
+
+$password = $form->get('password');
+$password->setAttribute('class', 'form-control passcode-icon');
+$password->setAttribute('placeholder', 'Password');
+
+$user_type = $form->get('user_type');
+$user_type->setValueOptions(["Manager"=>"Manager", "Agent"=>"Agent"]);
+$user_type->setValue("Manager");
+
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-default');
+?>
+<body class="login-bg">
+<div class="row login-box">
+	<div class="large-12 columns logo"> 
+            <a href="<?= $this->url('home') ?>" title="Live Support">
+                <img src="<?= $this->basePath("images/logo.png") ?>" alt="Live Support" title="Live Support">
+            </a> 
+        </div>
+	<div class="large-12 columns title-text p-20">User Login</div>
+        <?php if($this->flashMessenger()->hasMessages()) {?>
+    <span class="alert alert-danger col-sm-12 text-center">
+    <?php $messages = $this->flashMessenger()->getMessages();
+            foreach($messages as $message) {
+                echo $message;
+            }?>
+    </span>    
+        <?php } ?>
+	<div class="large-12 p-0">
+            <?php 
+		$form->setAttribute('action', $this->url('login', ['action' => 'checklogin']));
+                $form->setAttribute('class','larger-12');
+                $form->prepare();
+                echo $this->form()->openTag($form);
+            ?>
+             <div class="large-12 columns p-t-20 p-b-20 login-selection">
+		<div class="row">
+                    <div class="large-12 small-12 select-text-box columns">
+                        <?= $this->formElement($user_type) ?>
+                        <?= $this->formElementErrors()->render($user_type, ['class' => 'help-block']) ?>
+                    </div>
+		</div>
+            </div>
+	<div class="large-12 columns">
+		<div class="form-group form-group-box">
+			<?= $this->formElement($email) ?>
+                        <?= $this->formElementErrors()->render($email, ['class' => 'help-block']) ?>
+		</div>
+            </div>
+            <div class="large-12 columns">
+            	<div class="form-group form-group-box m-t-20">
+			<?= $this->formElement($password) ?>
+                        <?= $this->formElementErrors()->render($password, ['class' => 'help-block']) ?>
+                	<p class="text-right">
+                            <a href="<?= $this->url('forgotpassword') ?>" title="Forgot Password?">Forgot Password?</a>
+                        </p>
+		</div>
+            </div>  
+			<div class="large-12 columns">
+                            <div class="form-group cennter m-t-30"> 
+                                <?php echo $this->formSubmit($submit); ?>
+                            </div>
+                        </div>
+		<?php echo $this->form()->closeTag(); ?>
+	</div>
+</div>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js') ?>"></script>
+<script src="<?= $this->basepath('js/foundation.min.js') ?>"></script>
+
+<script type="text/javascript">
+        $('select').each(function () {
+            var $this = $(this),
+                    numberOfOptions = $(this).children('option').length;
+            $this.addClass('s-hidden');
+            $this.wrap('<div class="select"></div>');
+            $this.after('<div class="styledSelect"></div>');
+            var $styledSelect = $this.next('div.styledSelect');
+            $styledSelect.text($this.children('option').eq(0).text());
+            var $list = $('<ul />', {
+                'class': 'options'
+            }).insertAfter($styledSelect);
+            for (var i = 0; i < numberOfOptions; i++) {
+                $('<li />', {
+                    text: $this.children('option').eq(i).text(),
+                    rel: $this.children('option').eq(i).val()
+                }).appendTo($list);
+            }
+            var $listItems = $list.children('li');
+            $styledSelect.click(function (e) {
+                e.stopPropagation();
+                $('div.styledSelect.active').each(function () {
+                    $(this).removeClass('active').next('ul.options').hide();
+                });
+                $(this).toggleClass('active').next('ul.options').toggle();
+            });
+            $listItems.click(function (e) {
+                e.stopPropagation();
+                $styledSelect.text($(this).text()).removeClass('active');
+                $this.val($(this).attr('href'));
+                $list.hide();
+                var employee = $('#user .styledSelect').html();
+                $('#user_types').val(employee);
+            });
+            $(document).click(function () {
+                $styledSelect.removeClass('active');
+                $list.hide();
+            });
+        });
+    </script>

@@ -22,6 +22,10 @@ class LoginForm extends Form
             'type' => 'password',
         ]);
         $this->add([
+            'name' => 'user_type',
+            'type' => 'Zend\Form\Element\Radio',
+        ]);
+        $this->add([
             'name' => 'submit',
             'type' => 'submit',
         ]);

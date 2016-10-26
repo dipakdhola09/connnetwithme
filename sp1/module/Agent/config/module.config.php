@@ -37,16 +37,21 @@ return [
        'not_found_template'       => 'error/404',
        'exception_template'       => 'error/index',
        'template_map' => [
-           'layout/agent'           => __DIR__ . '/../view/layout/agent.phtml',
-           'layout/agentChat'       => __DIR__ . '/../view/layout/agentChat.phtml',
-           'agent/agent/index'       => __DIR__ . '/../view/agent/agent/index.phtml',
+           'layout/agent'            => __DIR__ . '/../view/layout/agent.phtml',
+           'layout/chat'             => __DIR__ . '/../view/layout/agentChat.phtml',
            'error/404'               => __DIR__ . '/../view/error/404.phtml',
            'error/index'             => __DIR__ . '/../view/error/index.phtml',
        ],
        'template_path_stack' => [
            'agent' => __DIR__ . '/../view',
        ],
-   ],     
+   ],
     
+     'module_layouts' => array(
+      'Agent' => array(
+          'default' => 'layout/agent',
+          'chat'    => 'layout/agentChat',
+        )
+     ),
 ];
 

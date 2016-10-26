@@ -19,6 +19,9 @@
             </div>
         </div>
     </form>
+    <?php //if(count($data) != 0){
+//            print_r($data);
+        ?>
     <div class="text-center">
         <ul class="tabs" data-tabs id="agent-chat-tabs">
             <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Chat 1</a></li>
@@ -28,6 +31,7 @@
         </ul>
     </div>
     <div class="tabs-content agent-chat-tabs" data-tabs-content="agent-chat-tabs">
+        
         <div class="tabs-panel is-active" id="panel1">
             <div class="tab-agent-detail">
                 <div class="tab-agent-header">
@@ -73,6 +77,7 @@
                             <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
                             <div class="small-3 large-2 columns r-name">James</div>
                         </div>
+                        
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -259,14 +264,20 @@
                 </div>
             </div>
         </div> 
-    </div> 
+    </div>
+     <?php //} 
+     //else {?>
+    <div class="">
+<!--        <strong><h5>No Chat Available.</h5></strong>-->
+    </div>
+    <?php// }?>
 </div>
 
 
 <footer>
     <div class="row">		
         <div class="large-12 small-12 columns footer-text">
-            Copyright 2016 <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a>   •   All Rights Reserved
+            Copyright 2016 <a href="<?= $this->url('home') ?>" title="LiveSupport" target="_blank">LiveSupport.com</a>   •   All Rights Reserved
         </div>
     </div>
 </footer>

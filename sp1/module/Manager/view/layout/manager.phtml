@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('Connect With me.. Manager.')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('Live Support.. Manager.')->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?=
                 $this->headMeta()
@@ -21,8 +21,11 @@
                 ->prependStylesheet($this->basePath('css/style.css'))
                 ->prependStylesheet($this->basePath('css/foundation.min.css'))
                 ->prependStylesheet($this->basePath('css/jqx.base.css'))
+                ->prependStylesheet($this->basePath('css/top-nav.css'))
                 ->prependStylesheet($this->basePath('css/docs.css'))
         ?>
+     
+       
     </head>
 
     <body>
@@ -31,7 +34,7 @@
                 <div class="large-2 small-12 columns left-column">
                     <div class="logo-box">
                         <a class="logo" href="<?= $this->url('home') ?>">
-                            <img src="<?= $this->basePath('images/logo.png'); ?>" alt="" title="">
+                            <img src="<?= $this->basePath('images/logo.png'); ?>" alt="Live Support" title="Live Support">
                         </a>
                     </div>
                     <div class="side-menu hide-for-small-only">
@@ -39,25 +42,26 @@
                             <li class="active stats"><a href="<?= $this->basePath('manager'); ?>" title="">Stats</a></li>
                             <li class="curr-chat"><a href="<?= $this->basePath('manager/allChat'); ?>" title="">Current Chats</a></li>
                             <li class="agent-setup"><a href="<?= $this->basePath('manager/agentSetup'); ?>" title="">Agent Setup</a></li>
-                            <li class="chat-setup"><a href="<?= $this->basePath('manager/chatSetup'); ?>" title="">Chat Setup</a></li>
-                            <li class="chat-design"><a href="<?= $this->basePath('manager/chatDesign'); ?>" title="">Chat Design</a></li>
+                            <li class="chat-setup"><a href="<?= $this->basePath('chatsetup'); ?>" title="">Chat Setup</a></li>
+                            <li class="chat-design"><a href="<?= $this->basePath('chatdesign'); ?>" title="">Chat Design</a></li>
                             <li class="report"><a href="javascript:void(0)" title="">Reports</a></li>
                             <li class="account"><a href="<?= $this->basePath('manager/accountSettings'); ?>" title="">Accounts</a></li>
+                            <li class="logout"><a href="<?= $this->basePath('login/logout'); ?>" title="Logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="large-10 small-12 columns main-content grey-bg p-0">
                     <div class="blue-bg text-right p-5">
                         <span class="user">
+                            <?php $this->session=new \Zend\Session\Container('base');?>
                             <span><img src="<?= $this->basePath('images/user.png'); ?>" alt="" title=""></span>
-                            <span>Welcome<strong>John Millar</strong></span>
+                            <span>Welcome<strong><?php echo $this->session->offsetGet('first_name'); ?> <?php echo $this->session->offsetGet('last_name'); ?> </strong></span>
                         </span>
-                        <span class="login-logout"><a href="#" class="logout">Logout</a></span>
+                        <span class="login-logout"><a href="<?= $this->url('login',['action' => 'logout']) ?>" class="logout">Logout</a></span>
                     </div>
 
-                    <?= $this->content ?>
-                </div>
-            </div>
-        </div>
-    </body>
+                <?= $this->content ?>
+              
+      </body>
+       
 </html>

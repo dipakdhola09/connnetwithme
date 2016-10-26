@@ -1,12 +1,12 @@
 <section>
-	<div class="row white-bg">
-		<div class="large-2 small-12 columns left-column">
-			<div class="logo-box">
-            	<a class="logo" href="<?= $this->url('home') ?>"><img src="images/logo.png" alt="" title=""></a>
+    <div class="row white-bg">
+        <div class="large-2 small-12 columns left-column">
+            <div class="logo-box">
+                <a class="logo" href="<?= $this->url('home') ?>"><img src="images/logo.png" alt="" title=""></a>
             </div>
             <div class="side-menu">
-            	<ul>
-                	<li class="active stats"><a href="javascript:void(0)" title="">Stats</a></li>
+                <ul>
+                    <li class="active stats"><a href="javascript:void(0)" title="">Stats</a></li>
                     <li class="curr-chat"><a href="javascript:void(0)" title="">Current Chats</a></li>
                     <li class="agent-setup"><a href="javascript:void(0)" title="">Agent Setup</a></li>
                     <li class="chat-setup"><a href="javascript:void(0)" title="">Chat Setup</a></li>
@@ -15,19 +15,19 @@
                     <li class="account"><a href="javascript:void(0)" title="">Accounts</a></li>
                 </ul>
             </div>
-		</div>
-		<div class="large-10 small-12 columns main-content grey-bg p-0">
-        	<div class="blue-bg text-right p-5">
+        </div>
+        <div class="large-10 small-12 columns main-content grey-bg p-0">
+            <div class="blue-bg text-right p-5">
                 <span class="user">
-                	<span><img src="images/user.png" alt="" title=""></span>
+                    <span><img src="images/user.png" alt="" title=""></span>
                     <span>Welcome<strong>John Millar</strong></span>
                 </span>
-                <span class="login-logout"><a href="<?= $this->url('login',['action' =>'logout']) ?>" class="logout">Logout</a></span>
+                <span class="login-logout"><a href="<?= $this->url('login', ['action' => 'logout']) ?>" class="logout">Logout</a></span>
             </div>
             <div class="header-bg">
-            	<div class="header-title">AGENTS</div>
+                <div class="header-title">AGENTS</div>
             </div>
-			<div class="main-content">           
+            <div class="main-content">           
 
                 <div class='default'>
                     <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
@@ -35,18 +35,18 @@
                         </div>                        
                     </div>
                 </div>
-                
-			</div>
-		</div>
-	</div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
-	<div class="row">		
-		<div class="large-12 small-12 columns footer-text">
-			Copyright 2016 <a href="index.html" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a>   •   All Rights Reserved
-		</div>
-	</div>
+    <div class="row">		
+        <div class="large-12 small-12 columns footer-text">
+            Copyright 2016 <a href="index.html" title="LiveSupport" target="_blank">LiveSupport.com</a>   •   All Rights Reserved
+        </div>
+    </div>
 </footer>
 
 <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script> 
@@ -70,73 +70,73 @@
 <script type="text/javascript" src="js/jqxgrid.pager.js"></script>
 <script type="text/javascript" src="js/demos.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-	var url = "data/orders.xml";
-	// prepare the data
-	var source =
-	{
-		datatype: "xml",
-		datafields: [
-			{ name: 'AgentName', },
-			{ name: 'Department', },
-			{ name: 'TimeOnline', },
-			{ name: 'CompletedChats', },
-			{ name: 'CurrentChats', },
-			{ name: 'Available', }
-		],
-		root: "entry",
-		record: "content",
-		id: 'AgentID',
-		url: url,
-		//sortcolumn: 'AgentName',
-		//sortdirection: 'asc'
-	};
-	var dataAdapter = new $.jqx.dataAdapter(source);
-	
-	var cellclass = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-		if (value == 'yes') {
-			return 'yes';
-		}
-		else {
-			return 'no';
-		}
-	}
-	var ProStatus = function(row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-		if ($('.jqx-item').hasClass('yes')) {
-        	$('.yes').children().html(function(index, text) {
-               return '<div class="switch round tiny"><input id="exampleCheckboxSwitch1" type="checkbox"><label for="exampleCheckboxSwitch1"></label></div>'; 
-            });
-	    } 
-		if ($('.jqx-item').hasClass('no')) {
-	    	$('.no').children().html(function(index, text) {
-               return '<div class="switch round tiny"><input id="exampleCheckboxSwitch2" type="checkbox"><label for="exampleCheckboxSwitch2"></label></div>'; 
-            });
-	    }		
-		
-	}
-	// create jqxgrid.
-	$("#jqxgrid").jqxGrid(
-	{
-		width: '100%',
-		//height: 450,
-		autoheight:true,
-		rowsheight: 50,
-		source: dataAdapter,
-		sortable: true,
-		pageable: true,
-		showsortcolumnbackground: false,
-		filterable: true,
-		altrows: true,
-		columns: [
-		  { text: 'Agent', datafield: 'AgentName', width: '25%'},
-		  { text: 'Department', datafield: 'Department', width: '25%' },
-		  { text: 'Time Online', datafield: 'TimeOnline', width: '16%' },
-		  { text: 'Completed Chats', datafield: 'CompletedChats', width: '12%', cellsalign : 'center' },
-		  { text: 'Current Chats', datafield: 'CurrentChats', width: '12%', cellsalign : 'center' },
-		  { text: 'Available', datafield: 'Available', width: '10%', cellsalign : 'center' , cellclassname: cellclass , cellsrenderer : ProStatus}
-		]
-	});
-	
-});
+    $(document).ready(function () {
+        var url = "data/orders.xml";
+        // prepare the data
+        var source =
+                {
+                    datatype: "xml",
+                    datafields: [
+                        {name: 'AgentName', },
+                        {name: 'Department', },
+                        {name: 'TimeOnline', },
+                        {name: 'CompletedChats', },
+                        {name: 'CurrentChats', },
+                        {name: 'Available', }
+                    ],
+                    root: "entry",
+                    record: "content",
+                    id: 'AgentID',
+                    url: url,
+                    //sortcolumn: 'AgentName',
+                    //sortdirection: 'asc'
+                };
+        var dataAdapter = new $.jqx.dataAdapter(source);
+
+        var cellclass = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+            if (value == 'yes') {
+                return 'yes';
+            }
+            else {
+                return 'no';
+            }
+        }
+        var ProStatus = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+            if ($('.jqx-item').hasClass('yes')) {
+                $('.yes').children().html(function (index, text) {
+                    return '<div class="switch round tiny"><input id="exampleCheckboxSwitch1" type="checkbox"><label for="exampleCheckboxSwitch1"></label></div>';
+                });
+            }
+            if ($('.jqx-item').hasClass('no')) {
+                $('.no').children().html(function (index, text) {
+                    return '<div class="switch round tiny"><input id="exampleCheckboxSwitch2" type="checkbox"><label for="exampleCheckboxSwitch2"></label></div>';
+                });
+            }
+
+        }
+        // create jqxgrid.
+        $("#jqxgrid").jqxGrid(
+                {
+                    width: '100%',
+                    //height: 450,
+                    autoheight: true,
+                    rowsheight: 50,
+                    source: dataAdapter,
+                    sortable: true,
+                    pageable: true,
+                    showsortcolumnbackground: false,
+                    filterable: true,
+                    altrows: true,
+                    columns: [
+                        {text: 'Agent', datafield: 'AgentName', width: '25%'},
+                        {text: 'Department', datafield: 'Department', width: '25%'},
+                        {text: 'Time Online', datafield: 'TimeOnline', width: '16%'},
+                        {text: 'Completed Chats', datafield: 'CompletedChats', width: '12%', cellsalign: 'center'},
+                        {text: 'Current Chats', datafield: 'CurrentChats', width: '12%', cellsalign: 'center'},
+                        {text: 'Available', datafield: 'Available', width: '10%', cellsalign: 'center', cellclassname: cellclass, cellsrenderer: ProStatus}
+                    ]
+                });
+
+    });
 
 </script>

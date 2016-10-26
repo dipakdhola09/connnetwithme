@@ -25,12 +25,9 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Application',
-    'Album',          // <-- Add this line
-    'Login',          // <-- Add this line
-    'Blog',
     'Auth',
     'Manager',
     'Agent',
-    'Admin',
+    'Chatpreview',
     
 ];

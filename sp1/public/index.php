@@ -3,12 +3,14 @@
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
+//Development Environment Set
+define('PUBLIC_PATH', "http://".$_SERVER['HTTP_HOST']."/connectwithme/public/");
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
 chdir(dirname(__DIR__));
-
 // Decline static file requests back to the PHP built-in webserver
 if (php_sapi_name() === 'cli-server') {
     $path = realpath(__DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
@@ -38,3 +40,4 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
 
 // Run the application!
 Application::init($appConfig)->run();
+

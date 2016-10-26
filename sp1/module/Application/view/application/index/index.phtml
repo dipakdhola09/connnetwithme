@@ -1,70 +1,41 @@
 <div class="off-canvas-wrapper">
 	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-position="left">
-			<button class="close-button" aria-label="Close menu" type="button" data-close> <span aria-hidden="true">&times;</span> </button>
+			<button class="close-button" aria-label="Close menu" type="button" data-close> 
+                            <span aria-hidden="true">&times;</span> 
+                        </button>
 			<ul class="mobile-ofc vertical menu">
-				<li> <a href="http://zurb.com/responsive">Showcase</a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="http://zurb.com/responsive">Foundation Showcase</a></li>
-						<li><a href="http://foundation.zurb.com/showcase/brands.html">Brands</a></li>
-						<li><a href="http://foundation.zurb.com/showcase/case-studies.html">Case Studies</a></li>
-						<li><a href="http://foundation.zurb.com/showcase/blog.html">Blog</a></li>
-						<li><a href="http://foundation.zurb.com/showcase/buzz.html">Buzz</a></li>
-						<li><a href="http://foundation.zurb.com/showcase/about.html">About Foundation</a></li>
-					</ul>
+				<li> <a href="<?= $this->url('home')?>">Home</a></li>
+                                <li> <a href="#home-section-1" id="menu-link-1" title="Product">Product</a> 
+				<!--<ul class="submenu menu vertical" data-submenu>
+						<li><a href="#" title="Product 1">Product 1</a></li>
+						<li><a href="#" title="Product 2">Product 2</a></li>
+						<li><a href="#" title="Product 3">Product 3</a></li>
+					</ul>--> 
 				</li>
-				<li> <a href="http://foundation.zurb.com/develop/getting-started.html">Develop</a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li class="title">Frameworks</li>
-						<li><a href="http://foundation.zurb.com/sites.html">Foundation for Sites</a></li>
-						<li><a href="http://foundation.zurb.com/emails.html">Foundation for Email</a></li>
-						<li><a href="http://foundation.zurb.com/apps.html">Foundation for Apps</a></li>
-						<li class="divider"></li>
-						<li class="title">Develop</li>
-						<li><a href="http://foundation.zurb.com/templates.html">HTML Templates</a></li>
-						<li><a href="http://foundation.zurb.com/sites/resources.html">Resources</a></li>
-						<li><a href="http://foundation.zurb.com/develop/building-blocks.html">Building Blocks</a></li>
-						<li><a href="http://foundation.zurb.com/develop/yeti-launch.html">Yeti Launch</a></li>
-						<li><a href="http://foundation.zurb.com/develop/contribute.html">Contribute</a></li>
-					</ul>
-				</li>
-				<li> <a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a></li>
-						<li><a href="http://foundation.zurb.com/learn/classes.html">Classes</a></li>
-						<li><a href="http://foundation.zurb.com/learn/custom-training.html">Custom Training</a></li>
-						<li><a href="http://foundation.zurb.com/learn/certification.html">Certification</a></li>
-						<li><a href="http://foundation.zurb.com/learn/responsive-reading.html">Responsive Reading</a></li>
-					</ul>
-				</li>
-				<li> <a href="http://foundation.zurb.com/get-involved/support.html">Get Involved</a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="http://foundation.zurb.com/get-involved/support.html">Connect</a></li>
-						<li><a href="http://foundation.zurb.com/get-involved/premium-support.html">PLZ Halp</a></li>
-						<li><a href="http://foundation.zurb.com/forum/sort/unanswered">Foundation Forum</a></li>
-						<li><a href="http://foundation.zurb.com/learn/events.html">Events</a></li>
-						<li><a href="http://foundation.zurb.com/get-involved/faq.html">FAQs</a></li>
-						<li><a href="http://foundation.zurb.com/get-involved/contribute.html">Contribute</a></li>
-						<li><a href="http://foundation.zurb.com/get-involved/yetinauts.html">Yetinauts</a></li>
-					</ul>
-				</li>
-				<li> <a href="http://foundation.zurb.com/frameworks-docs.html">Docs</a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="http://foundation.zurb.com/docs/" target="_blank">Sites Docs</a></li>
-						<li><a href="http://foundation.zurb.com/apps/docs/#!/" target="_blank">Apps Docs</a></li>
-						<li><a href="http://zurb.com/ink/docs.php" target="_blank">Email Docs</a></li>
-					</ul>
-				</li>
-				<li><a href="http://foundation.zurb.com/develop/getting-started.html" class="button">Getting Started</a></li>
+				<li> <a href="#home-section-2" title="Pricing">Pricing</a></li>
+				<li> <a href="#home-section-3" title="Feature">Feature</a></li>
+				<li> <a href="#home-section-4" title="Support">Support</a></li>
+				<li> <a href="#home-section-5" title="Contact Us">Contact Us</a></li>
 			</ul>
 		</div>
 		<div class="off-canvas-content" data-off-canvas-content>
 			<header>
 				<div class="large-12 medium-12 small-12  columns header-top-1">
 					<div class="row">
-						<div class="large-3 medium-3 small-12 float-left header-top-left"><a href="#"><i class="fa fa-facebook"></i></a> | <a href="#" title=""><i class="fa fa-twitter"></i></a> | <a href="#" title=""><i class="fa fa-pinterest-p"></i></a> | <a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
-						<div class="large-6 medium-6 small-12 float-left header-top-center">As a monetization tool or support service, you decide how it's used...</div>
-						<div class="large-3 medium-3 small-12 float-left header-top-right"><a href="<?= $this->url('login') ?>" title="Account Login">Account Login</a> | <a href="<?= $this->url('signup') ?>" title="Register">Register</a></div>
+						<div class="large-3 medium-3 small-12 float-left header-top-left">
+                                                    <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a> | 
+                                                    <a href="http://www.twitter.com" title=""><i class="fa fa-twitter"></i></a> | 
+                                                    <a href="http://www.pinterest.com" title=""><i class="fa fa-pinterest-p"></i></a> | 
+                                                    <a href="https://plus.google.com" title=""><i class="fa fa-google-plus"></i></a>
+                                                </div>
+						<div class="large-6 medium-6 small-12 float-left header-top-center">
+                                                    As a monetization tool or support service, you decide how it's used...
+                                                </div>
+						<div class="large-3 medium-3 small-12 float-left header-top-right">
+                                                    <a href="<?= $this->url('login')?>" title="Account Login">Account Login</a> | 
+                                                    <a href="<?= $this->url('signup')?>" title="Register">Register</a>
+                                                </div>
 					</div>
 				</div>
 				<div class="large-12 medium-12 small-12 columns header-top-2">
@@ -73,30 +44,25 @@
 							<div class="show-for-small-only mob-menu-icon">
 								<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
 							</div>
-							<a href="<?= $this->url('home') ?>" title="Connect with me"><img src="<?= $this->basePath('images/logo.png') ?>" alt="Connect with me" title="Connect with me"></a> </div>
+							<a href="<?= $this->url('home')?>" title="Live Support">
+                                                            <img src="<?= $this->basePath('images/logo.png') ?>" alt="Live Support" title="Live Support">
+                                                        </a> 
+                                                </div>
 						<div class="large-9 small-12 float-right">
 							<nav class="marketing-topbar show-for-medium">
 								<ul class="dropdown menu" data-dropdown-menu data-click-open="false">
-									<li> <a href="<?= $this->url('home') ?>">Home</a></li>
-									<li> <a href="#" title="Product">Product</a> 
-										<!--<ul class="submenu menu vertical" data-submenu>
-							<li><a href="#" title="Product 1">Product 1</a></li>
-							<li><a href="#" title="Product 2">Product 2</a></li>
-							<li><a href="#" title="Product 3">Product 3</a></li>
-						</ul>--> 
-									</li>
-									<li> <a href="#" title="Pricing">Pricing</a></li>
-									<li> <a href="#" title="Feature">Feature</a></li>
-									<li> <a href="#" title="Support">Support</a></li>
-									<li> <a href="#" title="Contact Us">Contact Us</a></li>
+									<li> <a href="<?= $this->url('home')?>">Home</a></li>
+                                                                        <li> <a href="#home-section-2" title="Pricing">Pricing</a></li>
+                                                                        <li> <a href="#home-section-3" title="Feature">Feature</a></li>
+                                                                        <li> <a href="#home-section-4" title="Support">Support</a></li>
+                                                                        <li> <a href="#home-section-5" title="Contact Us">Contact Us</a></li>
 								</ul>
 							</nav>
 						</div>
 					</div>
 				</div>
-				<div class="clearfix"></div>
 			</header>
-                    <section>
+			<section>
 				<div class="large-12 medium-12 small-12 columns index-center-main">
 					<div class="index-details-box">
 						<div class="large-12 small-12 columns index-box-row-1">The <strong>fastest way</strong> to help your customers</div>
@@ -104,21 +70,451 @@
 							<div class="row">Start chatting with visitors who need your help using a free <strong>15-day trial</strong></div>
 						</div>
 						<div class="large-12 small-12 columns index-box-row-3 p-t-15 p-b-15">
-							<div class="row"> <a href="<?= $this->url('signup') ?>" title="" class="btn btn-default float-left">Try Connect with me</a> <a href="<?= $this->url('login') ?>" title="" class="btn btn-reverse float-right">Login</a> </div>
+							<div class="row"> <a href="<?= $this->url('signup')?>" title="" class="btn btn-default float-left">Try Live Support</a> <a href="<?= $this->url('login')?>" title="" class="btn btn-reverse float-right">Login</a> </div>
 						</div>
-						<div class="large-12 small-12 columns index-box-row-4">By clicking "TRY CONNECT WITH ME" you agree to the Connect with Me Terms & Conditions and Privacy Policy.</div>
+						<div class="large-12 small-12 columns index-box-row-4">By clicking "TRY LIVE SUPPORT" you agree to the Live Support Terms &amp; Conditions and Privacy Policy.</div>
+					</div>
+				</div>
+				<div id="home-section-1" class="large-12 medium-12 small-12 columns p-t-b-50 bg-white">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="large-12 columns content-title">Easy to Get Started</div>
+							<div class="large-12 columns p-t-40 p-b-20">
+								<div class="large-4 medium-4 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="one-minute-icon"></i> <strong>1 Minute Setup</strong> </div>
+										<div class="gs-text">Copy a simple line of Javascript in to the HTML of your website and the chat widget starts working instantly.</div>
+									</div>
+								</div>
+								<div class="large-4 medium-4 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="start-chatting-icon"></i> <strong>Start Chatting</strong> </div>
+										<div class="gs-text">Login to the dashboard to invite members of your team, create shortcuts and to start chatting with your visitors.</div>
+									</div>
+								</div>
+								<div class="large-4 medium-4 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="track-process-icon"></i> <strong>Track Progress</strong> </div>
+										<div class="gs-text">Monitor and track you and your teams progress over time, review chat history and check performance in analytics.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-light-gray">
+					<div class="row">
+						<div class="large-12 columns content-title">Help Customers Find What They’re Looking For</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>Add the Live Support chat widget to your website and start talking to customers in minutes. Live chat gives you brand a voice and let you talk to customers in real-time.</p>
+							</div>
+						</div>
+						<div class="large-12 columns">
+							<div class="customer-screen-left"> <img src="<?= $this->basePath('images/customer-screen-img.png')?>"> </div>
+							<div class="customer-screen-right"> <img src="<?= $this->basePath('images/agent-screen-img.png')?>"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-white">
+					<div class="row">
+						<div class="large-12 columns content-title">Increase Your Sales with Proactive Engagement</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>Customers are 3 times more likely to make a purchase when you reach out with a chat. For example, Le Tote uses an automated trigger to offer help to customers who are lingering on the checkout page. By proactively engaging customers during the buying process, Le Tote is able to reduce cart abandonment and increase conversions.</p>
+							</div>
+						</div>
+						<div class="large-12 columns content-title-text p-t-30 cennter"> 
+                                                    <img src="<?= $this->basePath('images/increase-sale-img.png')?>" title="Increase Your Sales with Proactive Engagement" alt="Increase Your Sales with Proactive Engagement"> </div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-light-gray right-bg-icon">
+					<div class="row">
+						<div class="large-12 columns content-title">Improve Customer Satisfaction by Solving Problems Faster</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>Customers hate waiting for support. With live chat, agents are able to help more customers in a shorter period of time enabling businesses to resolve customer queries 7 times faster than through email. <strong>Shorter wait times mean happier customers.</strong></p>
+							</div>
+						</div>
+						<div class="large-12 small-12 columns content-slider-box">
+							<div class="row">
+								<ul class="customer-feedback">
+									<li>
+										<div class="large-12 small-12 columns cennter customer-fb-row1">It’s a lot easier now to help more customers. The ability to transfer chats has also been important for achieving faster resolution times and increased overall satisfaction.</div>
+										<div class="large-12 small-12 columns cennter customer-fb-row2"><strong>Justin Smith, Manager of the Live Help Program</strong></div>
+									</li>
+									<li>
+										<div class="large-12 small-12 columns cennter customer-fb-row1">The ability to transfer chats has also been important for achieving faster resolution times and increased overall satisfaction.</div>
+										<div class="large-12 small-12 columns cennter customer-fb-row2"><strong>Justin Smith, Manager of the Live Help Program</strong></div>
+									</li>
+									<li>
+										<div class="large-12 small-12 columns cennter customer-fb-row1">It’s a lot easier now to help more customers. The ability to transfer chats has also been important for achieving faster resolution times and increased overall satisfaction.</div>
+										<div class="large-12 small-12 columns cennter customer-fb-row2"><strong>Justin Smith, Manager of the Live Help Program</strong></div>
+									</li>
+									<li>
+										<div class="large-12 small-12 columns cennter customer-fb-row1">The ability to transfer chats has also been important for achieving faster resolution times and increased overall satisfaction.</div>
+										<div class="large-12 small-12 columns cennter customer-fb-row2"><strong>Justin Smith, Manager of the Live Help Program</strong></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-white">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="large-12 columns content-title">Why Live Chat Matters</div>
+							<div class="large-12 columns p-t-40 p-b-20">
+								<div class="large-3 medium-6 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="live-chat-icon-1"></i> </div>
+										<div class="gs-text">Help customers find what they're looking for</div>
+									</div>
+								</div>
+								<div class="large-3 medium-6 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="live-chat-icon-2"></i> </div>
+										<div class="gs-text">Increase sales with proactive engagement</div>
+									</div>
+								</div>
+								<div class="large-3 medium-6 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="live-chat-icon-3"></i> </div>
+										<div class="gs-text">Improve customer satisfaction by solving problems faster</div>
+									</div>
+								</div>
+								<div class="large-3 medium-6 small-12 columns p-l-r-20 m-b-10">
+									<div class="get-started-box">
+										<div class="gs-title"> <i class="live-chat-icon-4"></i> </div>
+										<div class="gs-text">Track and monitor your website visitors</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-light-gray">
+					<div class="row">
+						<div class="large-12 columns content-title">Features You Would Expect From A Premium Chat App</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>Just because Live Support is free, that doesn't mean we don't care about building the features you would expect from a paid chat application</p>
+							</div>
+						</div>
+						<div class="large-12 columns home-chat-app-box">
+							<div class="row">
+								<div class="large-7 columns p-0">
+								<div class="large-12 columns home-chat-app-title">Focus on what you do best, will handle the rest!</div>
+								<ul>
+									<li>Monitor website visitors in real time</li>
+									<li>Answer chats from your Mobile Device</li>
+									<li>Proactively engage visitors with Triggers</li>
+									<li>Customize your Visitor Widget to suit your site</li>
+									<li>Localize greetings and messages in your Language</li>
+									<li>Respond quickly with Predefined Shortcuts</li>
+									<li>Integrate with Wordpress, Joomla, Magento, etc..</li>
+									<li>...and much much more.</li>
+								</ul>
+							</div>
+								<div class="large-5 columns p-0">
+								<div class="large-12 columns home-chat-app-title">Have some questions?</div>
+								<ul>
+									<li>How can you offer this for free?</li>
+									<li>How many Agents can we add?</li>
+									<li>Do you limit the number of Concurrent chats?</li>
+									<li>Is our data safe?</li>
+									<li>Will I ever be charged to use the software?</li>
+									<li>Are there any Ads?</li>
+								</ul>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="home-section-2" class="large-12 medium-12 small-12 columns p-t-b-50 bg-white">
+					<div class="row">
+						<div class="large-12 columns content-title">Pricing</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+							</div>
+						</div>
+						<div class="large-12 columns product-pricing-bg">
+							<div class="row">
+								<div class="large-3 medium-3 small-12 columns plan-details-section p-0">
+									<div class="large-12 small-12 columns plan-details-main-title">Plan Details</div>
+									<div class="large-12 small-12 columns plan-details-text">Unlimited chat history</div>
+									<div class="large-12 small-12 columns plan-details-text">Full chat customization</div>
+									<div class="large-12 small-12 columns plan-details-text">Ticketing system</div>
+									<div class="large-12 small-12 columns plan-details-text">Data security</div>
+									<div class="large-12 small-12 columns plan-details-text">Reporting</div>
+									<div class="large-12 small-12 columns plan-details-text">Agent groups</div>
+									<div class="large-12 small-12 columns plan-details-text">Multiple brandings</div>
+									<div class="large-12 small-12 columns plan-details-text">Staffing prediction</div>
+									<div class="large-12 small-12 columns plan-details-text">Work scheduler</div>
+									<div class="large-12 small-12 columns plan-details-text">Dedicated acc. manager</div>
+									<div class="large-12 small-12 columns plan-details-text">Product training</div>
+									<div class="large-12 small-12 columns plan-details-text">Software engineer support​</div>
+									<div class="large-12 small-12 columns plan-details-text">Security assistance</div>
+									
+								</div>
+								<div class="large-3 medium-3 small-12 columns plan-section-box active p-0">
+									<div class="large-12 columns p-0">
+										<div class="large-12 small-12 columns plan-details-title-top">
+											<span class="plan-title-row1">Silver</span>
+											<span class="plan-title-row2"><strong>$15</strong> / Month</span>
+										</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter">Basic</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+									</div>
+									<div class="large-12 small-12 columns p-0 plan-btn"><a href="" title="" class="large-12 btn btn-default">Select This Plan</a></div>
+								</div>
+								<div class="large-3 medium-3 small-12 columns plan-section-box p-0">
+									<div class="large-12 columns p-0 ">
+										<div class="large-12 small-12 columns plan-details-title-top">
+											<span class="plan-title-row1">Gold</span>
+											<span class="plan-title-row2"><strong>$30</strong> / Month</span>
+										</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter">Advance</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-close"></i></div>
+									</div>
+									<div class="large-12 small-12 columns p-0 plan-btn"><a href="" title="" class="large-12 btn btn-default">Select This Plan</a></div>
+								</div>
+								
+								<div class="large-3 medium-3 small-12 columns plan-section-box p-0">
+									<div class="large-12 columns p-0">
+										<div class="large-12 small-12 columns plan-details-title-top">
+											<span class="plan-title-row1">Platinum</span>
+											<span class="plan-title-row2"><strong>$45</strong> / Month</span>
+										</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter">EnterPrise</div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+										<div class="large-12 small-12 columns plan-covered-details cennter"><i class="fa fa-check"></i></div>
+									</div>
+									<div class="large-12 small-12 columns p-0 plan-btn"><a href="" title="" class="large-12 btn btn-default">Select This Plan</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="home-section-3" class="large-12 medium-12 small-12 columns p-t-b-50 bg-light-gray">
+					<div class="row">
+						<div class="large-12 columns content-title">About Us</div>
+						<div class="large-12 columns content-title-text p-t-20 p-b-10">
+							<div class="row">
+								<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+							</div>
+						</div>
+						<div class="large-12 columns p-t-40 small-p-none">
+							<div class="large-6 large-push-6 small-12 columns home-aboutus-img m-b-small-10"><img src="images/about-us-banner.png" title="About Us" alt="About Us"></div>
+							<div class="large-6 large-pull-6 small-12 columns home-about-us-box">
+								<div class="large-12 columns home-about-us-title">Focus on what you do best, will handle the rest!</div>
+								<div class="large-12 columns home-about-us-text">
+									<p>Offer phone, text messaging, live chat, email, and Skype in one spot to meet the preferences of your consumers or monetize your site to sell your advice, information, or services.</p>
+									<p>Set your availability for each method and be contacted when and where you want.</p>
+									<p>Set your own rates for each service or allow people to reach you for free, you decide.</p>
+									<p>We handle the billing, as well as phone and email masking, freeing you up to support your customers or sell your information.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="large-12 medium-12 small-12 columns p-t-b-50 bg-white">
+					<div class="row">
+						<div class="large-12 columns content-title">We Are Growing Every Day!</div>
+						<div class="large-12 columns p-t-40 cennter">
+							<div class="growing-icon-wrapper">
+              					<div class="grow-ed-started-box">
+									<div class="grow-ed-text"><strong>89</strong>
+										<span>Total No. of Companies</span>
+									</div>
+								</div>
+            				</div>
+							<div class="growing-icon-wrapper">
+              					<div class="grow-ed-started-box">
+									<div class="grow-ed-text"><strong>6</strong>
+										<span>New Companies/ Month</span>
+									</div>
+								</div>
+            				</div>
+							<div class="growing-icon-wrapper">
+              					<div class="grow-ed-started-box">
+									<div class="grow-ed-text"><strong>15</strong>
+										<span>Websites Engaged / Hour</span>
+									</div>
+								</div>
+            				</div>
+							<div class="growing-icon-wrapper">
+              					<div class="grow-ed-started-box">
+									<div class="grow-ed-text"><strong>251</strong>
+										<span>No. of Serving Agents</span>
+									</div>
+								</div>
+            				</div>
+							<div class="growing-icon-wrapper">
+              					<div class="grow-ed-started-box">
+									<div class="grow-ed-text"><strong>1,289</strong>
+										<span>Average Chats / Hour</span>
+									</div>
+								</div>
+            				</div>
+						</div>
+					</div>
+				</div>
+				<div id="home-section-4" class="large-12 medium-12 small-12 columns p-t-b-50 bg-light-gray">
+					<div class="row">
+						<div class="large-12 columns content-title">Supporting Platforms</div>
+						<div class="large-12 columns p-t-40 cennter">
+							<div class="support-icon-wrapper">
+              						<div class="sp-started-box">
+										<div class="sp-title"> <i class="support-platform-icon-1"></i> </div>
+										<div class="sp-text"><strong>Windows</strong></div>
+									</div>
+            					</div>
+							<div class="support-icon-wrapper">
+									<div class="sp-started-box">
+										<div class="sp-title"> <i class="support-platform-icon-2"></i> </div>
+										<div class="sp-text"><strong>Mac OS X</strong></div>
+									</div>
+								</div>
+							<div class="support-icon-wrapper">
+									<div class="sp-started-box">
+										<div class="sp-title"> <i class="support-platform-icon-3"></i> </div>
+										<div class="sp-text"><strong>Web Browser</strong></div>
+									</div>
+								</div>
+							<div class="support-icon-wrapper">
+									<div class="sp-started-box">
+										<div class="sp-title"> <i class="support-platform-icon-4"></i> </div>
+										<div class="sp-text"><strong>IOS</strong></div>
+									</div>
+								</div>
+							<div class="support-icon-wrapper">
+									<div class="sp-started-box">
+										<div class="sp-title"> <i class="support-platform-icon-5"></i> </div>
+										<div class="sp-text"><strong>Android</strong></div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div id="home-section-5" class="large-12 medium-12 small-12 columns p-t-b-50 bg-dark-blue">
+					<div class="row">
+						<div class="large-12 columns content-title">Contact Us</div>
+						<div class="large-12 small-12 columns">
+							<div class="row">
+								<div class="large-12 contact-us-form p-0">
+                                                                    <form class="large-12" action="#">
+										<div class="large-6 columns">
+											<div class="form-group form-group-box m-t-20">
+												<input placeholder="First Name" value="" class="form-control name-icon" type="text">
+											</div>
+										</div>
+										<div class="large-6 columns">
+											<div class="form-group form-group-box m-t-20">
+												<input placeholder="Last Name" value="" class="form-control name-icon" type="text">
+											</div>
+										</div>
+										<div class="large-6 columns">
+											<div class="form-group form-group-box m-t-20">
+												<input placeholder="Email Address" value="" class="form-control login-icon" type="email">
+											</div>
+										</div>
+										
+										<div class="large-6 columns">
+											<div class="form-group form-group-box m-t-20">
+												<input placeholder="Phone No" value="" class="form-control phone-icon" type="text">
+											</div>
+										</div>
+										<div class="large-12 columns">
+											<div class="form-group form-group-box form-group-textarea-box m-t-20">
+                            					<textarea class="form-control name-icon" placeholder="Message" rows="5"></textarea>
+                        					</div>
+										</div>
+										
+										<div class="large-12 columns">
+											<div class="form-group cennter m-t-30"> <a href="#" title="" class="btn btn-default">Send Message</a> </div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-                        <?= $this->content ?>			
 			<footer>
 				<div class="large-12 small-12 columns p-t-20">
 					<div class="row">
-						<div class="large-12 small-12 columns footer-links"><a href="<?= $this->url('home') ?>" title="Home">Home</a> | <a href="#" title="About Us">About Us</a> | <a href="#" title="Contact Us">Contact Us</a> | <a href="#" title="Privacy Policy">Privacy Policy</a> | <a href="#" title="Terms & Conditions">Terms & Conditions</a> | <a href="#" title="Sitemap">Sitemap</a> </div>
-						<div class="large-12 small-12 columns footer-text"> Copyright 2016 <a href="index.html" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a> &bull;   All Rights Reserved </div>
+						<div class="large-12 small-12 columns footer-links"><a href="<?= $this->url('home')?>" title="Home">Home</a> | <a href="#" title="About Us">About Us</a> | <a href="#" title="Contact Us">Contact Us</a> | <a href="#" title="Privacy Policy">Privacy Policy</a> | <a href="#" title="Terms & Conditions">Terms & Conditions</a> | <a href="#" title="Sitemap">Sitemap</a> </div>
+						<div class="large-12 small-12 columns footer-text"> Copyright 2016 <a href="<?= $this->url('home')?>" title="LiveSupport" target="_blank">LiveSupport.com</a> &bull;   All Rights Reserved </div>
 					</div>
 				</div>
 			</footer>
 		</div>
 	</div>
 </div>
+<script src="http://foundation.zurb.com/sites/docs/assets/js/vendor.js"></script> 
+<script src="http://foundation.zurb.com/sites/docs/assets/js/foundation.js"></script> 
+<script src="http://foundation.zurb.com/sites/docs/assets/js/docs.js"></script> 
+<script type="text/javascript" src="js/slick.js"></script> 
+
+<script type="text/javascript">
+$(window).load(function() {
+	
+    $('.customer-feedback').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+});
+</script>
+<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 6500);
+          return false;
+        }
+      }
+    });
+  });
+</script>

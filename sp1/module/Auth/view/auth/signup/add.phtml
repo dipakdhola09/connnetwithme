@@ -1,12 +1,13 @@
 <?php
-
 // This provides a default CSS class and placeholder text for the title element:
 $first_name = $form->get('first_name');
 $first_name->setAttribute('class', 'form-control name-icon');
+$first_name->setAttribute('maxlength', '20');
 $first_name->setAttribute('placeholder', 'First Name');
 
 $last_name = $form->get('last_name');
 $last_name->setAttribute('class', 'form-control name-icon');
+$last_name->setAttribute('maxlength', '20');
 $last_name->setAttribute('placeholder', 'Last Name');
 
 $company = $form->get('company');
@@ -15,187 +16,159 @@ $company->setAttribute('placeholder', 'Company Name');
 
 $email = $form->get('email');
 $email->setAttribute('class', 'form-control login-icon');
+$email->setAttribute('maxlength', '50');
 $email->setAttribute('placeholder', 'Email');
 
 $password = $form->get('password');
 $password->setAttribute('class', 'form-control passcode-icon');
+$password->setAttribute('maxlength', '20');
 $password->setAttribute('placeholder', 'Password');
 
 $confirm_password = $form->get('confirm_password');
 $confirm_password->setAttribute('class', 'form-control passcode-icon');
+$confirm_password->setAttribute('maxlength', '20');
 $confirm_password->setAttribute('placeholder', 'Confirm Password');
 
 $phone = $form->get('phone');
 $phone->setAttribute('class', 'form-control phone-icon');
+$phone->setAttribute('maxlength', '15');
 $phone->setAttribute('placeholder', 'Phone No');
 
 $ext = $form->get('ext');
 $ext->setAttribute('class', 'form-control');
 $ext->setAttribute('placeholder', 'Ext.');
 
+
 $no_of_employee = $form->get('no_of_employee');
-$no_of_employee->setValueOptions(["Number of Employees","1-5","5-20","20-50","50-100","100+"]);
-$no_of_employees = $form->get('no_of_employees');
-$no_of_employees->setAttribute('id','no_of_employees');
+$no_of_employee->setAttribute('class', 'select-style');
+$no_of_employee->setAttribute('placeholder', 'Number of Employees');
+$no_of_employee->setValueOptions(["Number of Employees", "1-5"=>"1-5", "5-20"=>"5-20", "20-50"=>"20-50", "50-100"=>"50-100", "100+"=>"100+"]);
 //$employees->setAttribute('class', 'form-control');
 //$employees->setAttribute('placeholder', 'Number Of employees');
 
 $plan = $form->get('plan');
-$plan->setValueOptions(["How do you plan to use?","Personal","Bussiness","Enterprise","NGO","Student","Community"]);
-$plans = $form->get('plans');
-$plans->setAttribute('id','plans');
+$plan->setAttribute('class', 'select-style');
+$plan->setValueOptions(["How do you plan to use?", "Personal"=>"Personal", "Bussiness"=>"Bussiness", "Enterprise"=>"Enterprise", "NGO"=>"NGO", "Student"=>"Student", "Community"=>"Community"]);
+
 //$use->setAttribute('class', 'form-control');
 //$use->setAttribute('placeholder', 'How do you plan to use?');
-
 //captcha
 $captcha = $form->get('captcha');
 
 // This provides a default CSS class and placeholder text for the title element:
-
 // This provides CSS classes for the submit button:
 $submit = $form->get('submit');
 $submit->setAttribute('class', 'btn btn-default');
 ?>
 <body class="login-bg">
-<div class="row register-box">
-    <div class="large-12 columns logo"> <a href="<?= $this->url('home') ?>" title="Connect with Me"><img src="<?= $this->basePath("images/logo.png") ?>" alt="Connect with Me" title="Connect with Me"></a> </div>
-	<div class="large-12 columns title-text p-20">User Register</div>
-	<div class="large-12 p-0">
-            <?php 
-		$form->setAttribute('action', $this->url('signup', ['action' => 'add']));
-                $form->setAttribute('class','larger-12');
-                $form->prepare();
-                echo $this->form()->openTag($form);?>
-            
-			<div class="large-6 columns">
-				<div class="form-group form-group-box m-t-20">
-                                    <?= $this->formElement($first_name) ?>
-                                    <?= $this->formElementErrors()->render($first_name) ?>
-				</div>
-			</div>
-			<div class="large-6 columns">
-				<div class="form-group form-group-box m-t-20">
-					<?= $this->formElement($last_name) ?>
-                                        <?= $this->formElementErrors()->render($last_name, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-			<div class="large-12 columns">
-				<div class="form-group form-group-box m-t-20">
-					<?= $this->formElement($company) ?>
-                                        <?= $this->formElementErrors()->render($company, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-			<div class="large-12 columns">
-				<div class="form-group form-group-box m-t-20">
-					<?= $this->formElement($email) ?>
-                                        <?= $this->formElementErrors()->render($email, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-			<div class="large-12 columns">
-				<div class="form-group form-group-box m-t-20">
-                                    <?=     $this->formElement($password) ?>
-                                    <?=     $this->formElementErrors()->render($password, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-			<div class="large-12 columns">
-				<div class="form-group form-group-box m-t-20">
-					<?= $this->formElement($confirm_password) ?>
-                                        <?= $this->formElementErrors()->render($confirm_password, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-			<div class="large-12 columns">
-				<div class="form-group form-group-box m-t-20">
-					<div class="large-9 small-9 columns p-0">
-						<?= $this->formElement($phone) ?>
-                                                <?= $this->formElementErrors()->render($phone, ['class' => 'help-block']) ?>
-					</div>
-					<div class="large-3 small-3 columns p-0 ext-form-control">
-						<?= $this->formElement($ext) ?>
-                                                <?= $this->formElementErrors()->render($ext, ['class' => 'help-block']) ?>
-					</div>
-				</div>
-			</div>
-            
-			<div class="large-12 columns" id="emp">
-				<div class="form-group form-group-box m-t-20">
-					<div class="select-control-box employee-icon">
-                                                <?= $this->formElement($no_of_employee) ?>
-                                                <?= $this->formElement($no_of_employees) ?>
-                                                <?= $this->formElementErrors()->render($no_of_employees, ['class' => 'help-block']) ?>
-                                        </div>
-				</div>
-			</div>
-			<div class="large-12 columns" id="plan">
-				<div class="form-group form-group-box m-t-20 m-b-10">
-					<div class="select-control-box howtoplan-icon">
-                                            <?= $this->formElement($plan) ?>
-                                            <?= $this->formElement($plans) ?>
-                                            <?= $this->formElementErrors()->render($plans, ['class' => 'help-block']) ?>
-                                        </div>
-				</div>
-			</div>
-                      <div class="large-12 columns">
-				<div class="form-group m-t-20 m-b-10">
-			                  <?= $this->formElement($captcha) ?>
-                                          <?= $this->formElementErrors()->render($captcha, ['class' => 'help-block']) ?>
-				</div>
-			</div>
-                        <div class="large-12 columns">
-				<div class="form-group cennter m-t-30"> 
-                                    <?php echo $this->formSubmit($submit);
-                                            echo $this->formHidden($form->get('user_id')); ?>
-                                    <!--<a href="#" title="" class="btn btn-default">Register</a> </div>-->
-			</div>
-                        </div>
-			
-		<?php echo $this->form()->closeTag(); ?>
-	</div>
-</div>
-<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js') ?>"></script>
-<script src="<?= $this->basePath('js/foundation.min.js') ?>"></script>
-<script type="text/javascript">
-   
-$('select').each(function() {
-    var $this = $(this),
-        numberOfOptions = $(this).children('option').length;
-    $this.addClass('s-hidden');
-    $this.wrap('<div class="select"></div>');
-    $this.after('<div class="styledSelect"></div>');
-    var $styledSelect = $this.next('div.styledSelect');
-    $styledSelect.text($this.children('option').eq(0).text());
-    var $list = $('<ul />', {
-        'class': 'options'
-    }).insertAfter($styledSelect);
-    for (var i = 0; i < numberOfOptions; i++) {
-        $('<li />', {
-            text: $this.children('option').eq(i).text(),
-            rel: $this.children('option').eq(i).val()
-        }).appendTo($list);
-    }
-    var $listItems = $list.children('li');
-    $styledSelect.click(function(e) {
-        e.stopPropagation();
-        $('div.styledSelect.active').each(function() {
-            $(this).removeClass('active').next('ul.options').hide();
-        });
-        $(this).toggleClass('active').next('ul.options').toggle();
-    });
-    $listItems.click(function(e) {
-        e.stopPropagation();
-        $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('href'));
-        $list.hide();
-        var employee = $('#emp .styledSelect').html();
-        $('#no_of_employees').val(employee);
-        var use =$('#plan .styledSelect').html();
-        $('#plans').val(use);
-    });
-    $(document).click(function() {
-        $styledSelect.removeClass('active');
-        $list.hide();
-    });
-});
- $(document).ready(function () {
+    <div class="row register-box">
+        <div class="large-12 columns logo"> 
+            <a href="<?= $this->url('home') ?>" title="Live Support">
+                <img src="<?= $this->basePath("images/logo.png") ?>" alt="Live Support" title="Live Support">
+            </a> 
+        </div>
+        <div class="large-12 columns title-text p-20">User Register</div>
+<?php if ($this->flashMessenger()->hasMessages()) { ?>
+            <span class="alert alert-danger col-sm-12 text-center">
+            <?php
+            $messages = $this->flashMessenger()->getMessages();
+            foreach ($messages as $message) {
+                echo $message;
+            }
+            ?>
+            </span>    
+            <?php } ?>
+        <div class="large-12 p-0">
+        <?php
+        $form->setAttribute('action', $this->url('signup', ['action' => 'add']));
+        $form->setAttribute('class', 'larger-12');
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+
+            <div class="large-6 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($first_name) ?>
+                    <?= $this->formElementErrors()->render($first_name) ?>
+                </div>
+            </div>
+            <div class="large-6 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($last_name) ?>
+                    <?= $this->formElementErrors()->render($last_name, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($company) ?>
+                    <?= $this->formElementErrors()->render($company, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($email) ?>
+                    <?= $this->formElementErrors()->render($email, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($password) ?>
+                    <?= $this->formElementErrors()->render($password, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <?= $this->formElement($confirm_password) ?>
+                    <?= $this->formElementErrors()->render($confirm_password, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group form-group-box m-t-20">
+                    <div class="large-9 small-9 columns p-0">
+                        <?= $this->formElement($phone) ?>
+                        <?= $this->formElementErrors()->render($phone, ['class' => 'help-block']) ?>
+                    </div>
+                    <div class="large-3 small-3 columns p-0 ext-form-control">
+                        <?= $this->formElement($ext) ?>
+                        <?= $this->formElementErrors()->render($ext, ['class' => 'help-block']) ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="large-12 columns" id="emp">
+                <div class="form-group form-group-box m-t-20">
+                    <div class="select-control-box employee-icon">
+                        <?= $this->formElement($no_of_employee) ?>
+                        <?= $this->formElementErrors()->render($no_of_employee, ['class' => 'help-block']) ?>
+                    </div>
+                </div>
+            </div>
+            <div class="large-12 columns" id="plan">
+                <div class="form-group form-group-box m-t-20 m-b-10">
+                    <div class="select-control-box howtoplan-icon">
+                        <?= $this->formElement($plan) ?>
+                        <?= $this->formElementErrors()->render($plan, ['class' => 'help-block']) ?>
+                    </div>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group m-t-20 m-b-10 captcha-code pre">
+                    <?= $this->formElement($captcha) ?>
+                    <?= $this->formElementErrors()->render($captcha, ['class' => 'help-block']) ?>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="form-group cennter m-t-30"> 
+                    <?php echo $this->formSubmit($submit);
+                    echo $this->formHidden($form->get('user_id'));
+                    ?>
+                    <!--<a href="#" title="" class="btn btn-default">Register</a> </div>-->
+                </div>
+            </div>
+
+            <?php echo $this->form()->closeTag(); ?>
+        </div>
+    </div>
+    <script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js') ?>"></script>
+    <script src="<?= $this->basePath('js/foundation.min.js') ?>"></script>
     
-    });
-</script>

@@ -53,28 +53,23 @@ class SignupForm extends Form
             'name' => 'no_of_employee',
             'type' => 'select',
         ]);
-        $this->add([
-           'name' => 'no_of_employees',
-            'type' => 'hidden',
-        ]);
+        
         $this->add([
             'name' => 'plan',
             'type' => 'select',
         ]);
-        $this->add([
-            'name' => 'plans',
-            'type' => 'hidden',
-        ]);
+        
  
         //Add captcha field
-        $this->add(array(
+        $this->add([
 			'type' => 'Zend\Form\Element\Captcha',
 			'name' => 'captcha',
-			'options' => array(
+			'options' => [
 				'label' => 'captcha',
 				'captcha' => new \Zend\Captcha\Figlet(),
-			),
-		));
+			],
+		]);
+        
         $this->add([
             'name' => 'submit',
             'type' => 'submit',

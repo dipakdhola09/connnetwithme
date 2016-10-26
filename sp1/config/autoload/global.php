@@ -26,9 +26,12 @@ return [
          ),
      ),
     'module_layouts' => array(
-      // 'Application' => 'layout/layout.phtml',
+       'Application' => 'layout/application.phtml',
        'Manager'    => 'layout/manager.phtml',
        'Agent'      => 'layout/agent.phtml',
+       'Auth'       => 'layout/auth.phtml',
        'Admin'      => 'layout/admin.phtml',
+       'Chat'       => 'layout/chat.phtml',
+//       'Customer'   => 'layout/chat.phtml', 
    ),
 ];

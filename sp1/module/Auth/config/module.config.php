@@ -12,8 +12,8 @@ use Zend\Router\Http\Segment;
 return [
   'router' => [
         'routes' => [
-            //Sign up route
             
+            //Sign up route
             'signup' => [
                 'type'    => Segment::class,
                 'options' => [
@@ -28,6 +28,7 @@ return [
                     ],
                 ],
             ],
+            
             //Login route
             'login' => [
                 'type'    => Segment::class,
@@ -43,6 +44,7 @@ return [
                 ],
             ],
             
+            //Forgot password route
             'forgotpassword' => [
                 'type'    => Segment::class,
                 'options' => [

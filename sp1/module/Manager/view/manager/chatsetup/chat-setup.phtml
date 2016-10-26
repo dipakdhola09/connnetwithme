@@ -1,0 +1,517 @@
+
+<style>
+   .jqx-cell {height:28px;}
+</style>
+
+<div class="header-bg">
+    <div class="header-title">HELP LINK   /   FAQ BY DEPARTMENT</div>
+</div>
+<div class="side-menu show-for-small-only">
+    <ul>
+        <li class="stats"><a href="<?= $this->basePath('manager'); ?>" title="">Stats</a></li>
+        <li class="curr-chat"><a href="<?= $this->basePath('manager/allChat'); ?>" title="">Current Chats</a></li>
+        <li class="agent-setup"><a href="<?= $this->basePath('manager/agentSetup'); ?>" title="">Agent Setup</a></li>
+        <li class="active chat-setup"><a href="<?= $this->basePath('chatSetup'); ?>" title="">Chat Setup</a></li>
+        <li class="chat-design"><a href="<?= $this->basePath('manager/chatDesign'); ?>" title="">Chat Design</a></li>
+        <li class="report"><a href="javascript:void(0)" title="">Reports</a></li>
+        <li class="account"><a href="<?= $this->basePath('manager/accountSettings'); ?>" title="">Accounts</a></li>
+    </ul>
+</div>
+<div class="main-content">           
+
+    <div class='default'>
+        <div id='jqxWidget'>
+            <div id="table">
+            </div>                        
+        </div>
+    </div>    
+    <div class="subtitle">Proactive Chat Campaigns</div>
+    <div class='default'>    
+        <div id='jqxWidget1'>
+            <div id="table1">
+            </div>                        
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="row">		
+        <div class="large-12 small-12 columns footer-text">
+            Copyright 2016 <a href="<?= $this->url('home') ?>" title="LiveSupport" target="_blank">LiveSupport.com</a>   •   All Rights Reserved
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script>
+<script src="http://foundation.zurb.com/sites/docs/v/5.5.3/assets/js/modernizr.js"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js'); ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.edit.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdatatable.js'); ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/jqxtooltip.js'); ?>"></script>
+<script type="text/javascript">
+    $(document).ready(function () {           
+            var url = "chatsetup/getDepartment";
+            var theme = 'classic';
+            var ordersSource =
+            {
+                dataFields: [
+                    { name: 'department_id', type: 'int' },
+                    { name: 'department_name', type: 'string'},
+                    { name: 'url', type: 'string'}                    
+                ],
+                root: "data",
+                dataType: "json",
+                cache: false,
+                id: 'department_id',
+                url: url,
+                addRow: function (rowID, rowData, position, commit) {
+                    // synchronize with the server - send insert command
+                        
+                    // synchronize with the server - send insert command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    // you can pass additional argument to the commit callback which represents the new ID if it is generated from a DB.
+                    commit(true);
+                },
+                updateRow: function (rowID, rowData, commit) {
+                    
+                      var data = "update=true&" + $.param(rowData);
+                        $.ajax({
+                            type:'POST',
+                            dataType: 'json',
+                            url: "chatsetup/chatSetup",
+                            data: data,
+                            cache: false,
+                            success: function (data, status, xhr) {
+                                // insert command is executed.
+                                commit(true);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                commit(false);
+                            }
+                        });
+                    // synchronize with the server - send update command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    commit(true);
+                },
+                deleteRow: function (rowID, commit) {
+                    
+                     var data = "delete=true&department_id=" + rowID;
+                        $.ajax({
+                            type:'POST',
+                            dataType: 'json',
+                            url: "chatsetup/deleteDepartment",
+                            data: data,
+                            cache: false,
+                            success: function (data, status, xhr) {
+                                // insert command is executed.
+                                commit(true);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                commit(false);
+                            }
+                        });
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    commit(true);
+                }
+            };
+            var dataAdapter = new $.jqx.dataAdapter(ordersSource, {
+                loadComplete: function () {
+                    // data is loaded.
+                }
+            });
+            $("#table").jqxDataTable(
+            {
+                width: '100%',
+                source: dataAdapter,
+                
+                pageable: true,
+                editable: true,
+                showToolbar: true,
+                altRows: true,
+                ready: function()
+                {
+                    // called when the DataTable is loaded.         
+                },
+                pagerButtonsCount: 8,
+                toolbarHeight: 35,
+                renderToolbar: function(toolBar)
+                {
+                    var toTheme = function (className) {
+                        if (theme == "") return className;
+                        return className + " " + className + "-" + theme;
+                    }
+                    
+                    // appends buttons to the status bar.
+                    var container = $("<div style='overflow: hidden; position: relative; height: 100%; width: 100%;'></div>");
+                    var buttonTemplate = "<div style='float: left; padding: 3px; margin: 2px;'><div style='margin: 4px; width: 16px; height: 16px;'></div></div>";
+                    var addButton = $(buttonTemplate);
+                    var editButton = $(buttonTemplate);
+                    var deleteButton = $(buttonTemplate);
+                    var cancelButton = $(buttonTemplate);
+                    var updateButton = $(buttonTemplate);
+                    container.append(addButton);
+                    container.append(editButton);
+                    container.append(deleteButton);
+                    container.append(cancelButton);
+                    container.append(updateButton);
+                    toolBar.append(container);
+                    addButton.jqxButton({cursor: "pointer", enableDefault: false,  height: 25, width: 25 });
+                    addButton.find('div:first').addClass(toTheme('jqx-icon-plus'));
+                    addButton.jqxTooltip({ position: 'bottom', content: "Add"});
+                    editButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    editButton.find('div:first').addClass(toTheme('jqx-icon-edit'));
+                    editButton.jqxTooltip({ position: 'bottom', content: "Edit"});
+                    deleteButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    deleteButton.find('div:first').addClass(toTheme('jqx-icon-delete'));
+                    deleteButton.jqxTooltip({ position: 'bottom', content: "Delete"});
+                    updateButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    updateButton.find('div:first').addClass(toTheme('jqx-icon-save'));
+                    updateButton.jqxTooltip({ position: 'bottom', content: "Save Changes"});
+                    cancelButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    cancelButton.find('div:first').addClass(toTheme('jqx-icon-cancel'));
+                    cancelButton.jqxTooltip({ position: 'bottom', content: "Cancel"});
+                    var updateButtons = function (action) {
+                        switch (action) {
+                            case "Select":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: false });
+                                editButton.jqxButton({ disabled: false });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                            case "Unselect":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: true });
+                                editButton.jqxButton({ disabled: true });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                            case "Edit":
+                                addButton.jqxButton({ disabled: true });
+                                deleteButton.jqxButton({ disabled: true });
+                                editButton.jqxButton({ disabled: true });
+                                cancelButton.jqxButton({ disabled: false });
+                                updateButton.jqxButton({ disabled: false });
+                                break;
+                            case "End Edit":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: false });
+                                editButton.jqxButton({ disabled: false });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                        }
+                    }
+                    var rowIndex = null;
+                    $("#table").on('rowSelect', function (event) {
+                        var args = event.args;
+                        rowIndex = args.index;
+                        updateButtons('Select');
+                    });
+                    $("#table").on('rowUnselect', function (event) {
+                        updateButtons('Unselect');
+                    });
+                    $("#table").on('rowEndEdit', function (event) {
+                        updateButtons('End Edit');
+                    });
+                    $("#table").on('rowBeginEdit', function (event) {
+                        updateButtons('Edit');
+                    });
+                    addButton.click(function (event) {
+                        if (!addButton.jqxButton('disabled')) {
+                            // add new empty row.
+                            $("#table").jqxDataTable('addRow', null, {}, 'first');
+                            // select the first row and clear the selection.
+                            $("#table").jqxDataTable('clearSelection');
+                            $("#table").jqxDataTable('selectRow', 0);
+                            // edit the new row.
+                            $("#table").jqxDataTable('beginRowEdit', 0);
+                            updateButtons('add');
+                        }
+                    });
+                    cancelButton.click(function (event) {
+                        if (!cancelButton.jqxButton('disabled')) {
+                            // cancel changes.
+                            $("#table").jqxDataTable('endRowEdit', rowIndex, true);
+                        }
+                    });
+                    updateButton.click(function (event) {
+                        if (!updateButton.jqxButton('disabled')) {
+                            // save changes.
+                            $("#table").jqxDataTable('endRowEdit', rowIndex, false);
+                        }
+                    });
+                    editButton.click(function () {
+                        if (!editButton.jqxButton('disabled')) {
+                            $("#table").jqxDataTable('beginRowEdit', rowIndex);
+                            updateButtons('edit');
+                        }
+                    });
+                    deleteButton.click(function () {
+                        if (!deleteButton.jqxButton('disabled')) {
+                            $("#table").jqxDataTable('deleteRow', rowIndex);
+                            updateButtons('delete');
+                        }
+                    });
+                },
+                filterable: true,
+                sortable: true,
+                columns: [
+                  //{ text: 'ID', editable: false, dataField: 'department_id', cellsAlign: 'center', align:'center', width: '10%' },
+                  { text: 'Department', dataField: 'department_name', cellsAlign: 'left', align: 'left', width: '30%'},
+                  { text: 'URL’s', dataField: 'url', cellsAlign: 'center', align: 'center', width: '70%'} 
+              ]
+            });
+            //set Grid page limit for jqxDataTable
+//            $('#table').jqxDataTable({ 
+//                pageSize: PAGE_SIZE,               
+//            });
+        
+        
+        
+        
+        var url1 = "chatsetup/getChatcampaign";
+            var theme = 'classic';
+            var ordersSource =
+            {
+                dataFields: [
+                    { name: 'chat_campaigns_id', type: 'int' },
+                    { name: 'campaign_name', type: 'string'},
+                    { name: 'url', type: 'string'},                    
+                    { name: 'action', type: 'string'},
+                    { name: 'chat_text', type: 'string'}
+                    
+                ],
+                root: "data",
+                dataType: "json",
+                cache: false,
+                id: 'chat_campaigns_id',
+                url: url1,
+                addRow: function (rowID, rowData, position, commit) {
+                    // synchronize with the server - send insert command
+                        
+                    // synchronize with the server - send insert command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    // you can pass additional argument to the commit callback which represents the new ID if it is generated from a DB.
+                    commit(true);
+                },
+                updateRow: function (rowID, rowData, commit) {
+                    
+                      var data = "update=true&" + $.param(rowData);
+                        $.ajax({
+                            type:'POST',
+                            dataType: 'json',
+                            url: "chatsetup/saveChatcampaign",
+                            data: data,
+                            cache: false,
+                            success: function (data, status, xhr) {
+                                // insert command is executed.
+                                commit(true);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                commit(false);
+                            }
+                        });
+                    // synchronize with the server - send update command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    commit(true);
+                },
+                deleteRow: function (rowID, commit) {
+                    
+                     var data = "delete=true&chat_campaigns_id=" + rowID;
+                        $.ajax({
+                            type:'POST',
+                            dataType: 'json',
+                            url: "chatsetup/deleteChatcampaign",
+                            data: data,
+                            cache: false,
+                            success: function (data, status, xhr) {
+                                // insert command is executed.
+                                commit(true);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                commit(false);
+                            }
+                        });
+                    // synchronize with the server - send delete command
+                    // call commit with parameter true if the synchronization with the server is successful 
+                    // and with parameter false if the synchronization failed.
+                    commit(true);
+                }
+            };
+            var dataAdapter = new $.jqx.dataAdapter(ordersSource, {
+                loadComplete: function () {
+                    // data is loaded.
+                }
+            });
+            $("#table1").jqxDataTable(
+            {
+                width: '100%',
+                source: dataAdapter,
+                
+                pageable: true,
+                editable: true,
+                showToolbar: true,
+                altRows: true,
+                ready: function()
+                {
+                    // called when the DataTable is loaded.         
+                },
+                pagerButtonsCount: 8,
+                toolbarHeight: 35,
+                renderToolbar: function(toolBar)
+                {
+                    var toTheme = function (className) {
+                        if (theme == "") return className;
+                        return className + " " + className + "-" + theme;
+                    }
+                    
+                    // appends buttons to the status bar.
+                    var container = $("<div style='overflow: hidden; position: relative; height: 100%; width: 100%;'></div>");
+                    var buttonTemplate = "<div style='float: left; padding: 3px; margin: 2px;'><div style='margin: 4px; width: 16px; height: 16px;'></div></div>";
+                    var addButton = $(buttonTemplate);
+                    var editButton = $(buttonTemplate);
+                    var deleteButton = $(buttonTemplate);
+                    var cancelButton = $(buttonTemplate);
+                    var updateButton = $(buttonTemplate);
+                    container.append(addButton);
+                    container.append(editButton);
+                    container.append(deleteButton);
+                    container.append(cancelButton);
+                    container.append(updateButton);
+                    toolBar.append(container);
+                    addButton.jqxButton({cursor: "pointer", enableDefault: false,  height: 25, width: 25 });
+                    addButton.find('div:first').addClass(toTheme('jqx-icon-plus'));
+                    addButton.jqxTooltip({ position: 'bottom', content: "Add"});
+                    editButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    editButton.find('div:first').addClass(toTheme('jqx-icon-edit'));
+                    editButton.jqxTooltip({ position: 'bottom', content: "Edit"});
+                    deleteButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    deleteButton.find('div:first').addClass(toTheme('jqx-icon-delete'));
+                    deleteButton.jqxTooltip({ position: 'bottom', content: "Delete"});
+                    updateButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    updateButton.find('div:first').addClass(toTheme('jqx-icon-save'));
+                    updateButton.jqxTooltip({ position: 'bottom', content: "Save Changes"});
+                    cancelButton.jqxButton({ cursor: "pointer", disabled: true, enableDefault: false,  height: 25, width: 25 });
+                    cancelButton.find('div:first').addClass(toTheme('jqx-icon-cancel'));
+                    cancelButton.jqxTooltip({ position: 'bottom', content: "Cancel"});
+                    var updateButtons = function (action) {
+                        switch (action) {
+                            case "Select":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: false });
+                                editButton.jqxButton({ disabled: false });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                            case "Unselect":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: true });
+                                editButton.jqxButton({ disabled: true });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                            case "Edit":
+                                addButton.jqxButton({ disabled: true });
+                                deleteButton.jqxButton({ disabled: true });
+                                editButton.jqxButton({ disabled: true });
+                                cancelButton.jqxButton({ disabled: false });
+                                updateButton.jqxButton({ disabled: false });
+                                break;
+                            case "End Edit":
+                                addButton.jqxButton({ disabled: false });
+                                deleteButton.jqxButton({ disabled: false });
+                                editButton.jqxButton({ disabled: false });
+                                cancelButton.jqxButton({ disabled: true });
+                                updateButton.jqxButton({ disabled: true });
+                                break;
+                        }
+                    }
+                    var rowIndex = null;
+                    $("#table1").on('rowSelect', function (event) {
+                        var args = event.args;
+                        rowIndex = args.index;
+                        updateButtons('Select');
+                    });
+                    $("#table1").on('rowUnselect', function (event) {
+                        updateButtons('Unselect');
+                    });
+                    $("#table1").on('rowEndEdit', function (event) {
+                        updateButtons('End Edit');
+                    });
+                    $("#table1").on('rowBeginEdit', function (event) {
+                        updateButtons('Edit');
+                    });
+                    addButton.click(function (event) {
+                        if (!addButton.jqxButton('disabled')) {
+                            // add new empty row.
+                            $("#table1").jqxDataTable('addRow', null, {}, 'first');
+                            // select the first row and clear the selection.
+                            $("#table1").jqxDataTable('clearSelection');
+                            $("#table1").jqxDataTable('selectRow', 0);
+                            // edit the new row.
+                            $("#table1").jqxDataTable('beginRowEdit', 0);
+                            updateButtons('add');
+                        }
+                    });
+                    cancelButton.click(function (event) {
+                        if (!cancelButton.jqxButton('disabled')) {
+                            // cancel changes.
+                            $("#table1").jqxDataTable('endRowEdit', rowIndex, true);
+                        }
+                    });
+                    updateButton.click(function (event) {
+                        if (!updateButton.jqxButton('disabled')) {
+                            // save changes.
+                            $("#table1").jqxDataTable('endRowEdit', rowIndex, false);
+                        }
+                    });
+                    editButton.click(function () {
+                        if (!editButton.jqxButton('disabled')) {
+                            $("#table1").jqxDataTable('beginRowEdit', rowIndex);
+                            updateButtons('edit');
+                        }
+                    });
+                    deleteButton.click(function () {
+                        if (!deleteButton.jqxButton('disabled')) {
+                            $("#table1").jqxDataTable('deleteRow', rowIndex);
+                            updateButtons('delete');
+                        }
+                    });
+                },
+                filterable: true,
+                sortable: true,
+                columns: [
+                  //{ text: 'ID', editable: false, dataField: 'department_id', cellsAlign: 'center', align:'center', width: '10%' },
+                  { text: 'Campaign', dataField: 'campaign_name', cellsAlign: 'left', align: 'left', width: '20%'},
+                  { text: 'URL’s', dataField: 'url', cellsAlign: 'center', align: 'center', width: '30%'}, 
+                  { text: 'Action', dataField: 'action', cellsAlign: 'center', align: 'center', width: '20%'}, 
+                  { text: 'Chat', dataField: 'chat_text', cellsAlign: 'center', align: 'center', width: '30%'} 
+              ]
+            });
+});
+    
+</script>

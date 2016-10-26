@@ -27,6 +27,32 @@ return [
                     ],
                 ],
             ],
+            'chatsetup' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route' => '/chatsetup[/:action[/:id]]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\ChatsetupController::class,
+                        'action'     => 'chatSetup',
+                    ],
+                ],
+            ],
+            'chatdesign' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route' => '/chatdesign[/:action[/:id]]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\ChatdesignController::class,
+                        'action'     => 'chatDesign',
+                    ],
+                ],
+            ],
         ],
     ],
     

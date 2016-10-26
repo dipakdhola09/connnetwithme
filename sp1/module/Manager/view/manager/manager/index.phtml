@@ -22,12 +22,14 @@
     </div>
 
 </div>
-
+</div>
+</div>
+</div>
 
 <footer>
     <div class="row">		
         <div class="large-12 small-12 columns footer-text">
-            Copyright 2016 <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a>   •   All Rights Reserved
+            Copyright 2016 <a href="<?= $this->url('home') ?>" title="LiveSupport" target="_blank">LiveSupport.com</a>   •   All Rights Reserved
         </div>
     </div>
 </footer>
@@ -51,30 +53,32 @@
 <script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script>
 <script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script>
 <script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script>
+
 <script type="text/javascript">
     $(document).ready(function () {
-        var url = "data/orders.xml";
+        var url = "manager/getAgent";
         // prepare the data
         var source =
                 {
-                    datatype: "xml",
+                    datatype: "json",
                     datafields: [
-                        {name: 'AgentName', },
-                        {name: 'Department', },
-                        {name: 'TimeOnline', },
-                        {name: 'CompletedChats', },
-                        {name: 'CurrentChats', },
-                        {name: 'Available', }
+                        {name: 'agent_id', },
+                        {name: 'first_name', },
+                        {name: 'last_name', },
+                        {name: 'email', },
+                        {name: 'department', },
+                        {name: 'status', }
                     ],
-                    root: "entry",
-                    record: "content",
-                    id: 'AgentID',
+                    root: "data",
+                    id: 'agent_id',
                     url: url,
                     //sortcolumn: 'AgentName',
                     //sortdirection: 'asc'
                 };
         var dataAdapter = new $.jqx.dataAdapter(source);
 
+        var i = 0;
+        
         // create jqxgrid.
         $("#jqxgrid").jqxGrid({
             width: '100%',
@@ -91,12 +95,21 @@
             filterable: true,
             altrows: true,
             columns: [
-                {text: 'Agent', datafield: 'AgentName', width: '25%'},
-                {text: 'Department', datafield: 'Department', width: '25%'},
-                {text: 'Time Online', datafield: 'TimeOnline', width: '16%'},
-                {text: 'Completed Chats', datafield: 'CompletedChats', width: '12%', cellsalign: 'center'},
-                {text: 'Current Chats', datafield: 'CurrentChats', width: '12%', cellsalign: 'center'},
-                {text: 'Available', datafield: 'Available', width: '10%', cellsalign: 'center'}
+                {text: 'Agent ID', datafield: 'agent_id', width: '10%'},
+                {text: 'Agent Name', datafield: 'first_name', width: '25%'},
+                {text: 'Last Name', datafield: 'last_name', width: '15%'},
+                {text: 'Email', datafield: 'email', width: '25%'},
+                {text: 'Department', datafield: 'department', width: '15%'},
+                {text: 'Status', datafield: 'status', width: '10%', cellsalign: 'center', cellsRenderer: function (row, column, value) {
+                        var check = "";
+                        i++;
+                        
+                        if (value == "Yes") { var check = "checked = 'checked'";}
+                        
+                        // render custom column.
+                        button = '<div class="jqx-grid-cell-middle-align" style="margin-top: 16.5px;"><div class="switch round tiny"><input id="' + i + '" type="checkbox" ' + check + '><label for="' + i + '"></label></div></div>'
+                        return button;
+                    }}
             ]
         });
     });

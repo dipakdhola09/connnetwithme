@@ -1,421 +1,398 @@
-
-<div class="header-bg">
-    <div class="header-title">AGENT DASHBOARD</div>
-</div>
-<div class="side-menu show-for-small-only">
-    <ul>
-        <li class="active stats"><a href="<?= $this->basePath('manager'); ?>" title="">Stats</a></li>
-        <li class="curr-chat"><a href="<?= $this->basePath('manager/allChat'); ?>" title="">Current Chats</a></li>
-        <li class="agent-setup"><a href="<?= $this->basePath('manager/agentSetup'); ?>" title="">Agent Setup</a></li>
-        <li class="chat-setup"><a href="<?= $this->basePath('manager/chatSetup'); ?>" title="">Chat Setup</a></li>
-        <li class="chat-design"><a href="<?= $this->basePath('manager/chatDesign'); ?>" title="">Chat Design</a></li>
-        <li class="report"><a href="javascript:void(0)" title="">Reports</a></li>
-        <li class="account"><a href="<?= $this->basePath('manager/accountSettings'); ?>" title="">Accounts</a></li>
+<form class="text-right">
+    <div>
+        <div class="inline-block switch-text">Available for Chats :</div>
+        <div class="switch tiny round inline-block m-0 v-middle">
+            <input class="switch-input m-0" id="Switch" type="checkbox" name="Switch" checked>
+            <label class="switch-paddle" for="Switch"><span class="show-for-sr">Available for Chats</span></label>
+        </div>
+    </div>
+</form>
+<div class="text-center">
+    <ul class="tabs" data-tabs id="agent-chat-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Sally Test</a></li>
+        <li class="tabs-title"><a href="#panel2">Joe Test</a></li>
+        <li class="tabs-title"><a href="#panel3">Anna Test</a></li>
+        <li class="tabs-title"><a href="#panel4">Manager</a></li>
+        <li class="tabs-title"><a href="#panel5">Query <i class="fa fa-arrow-down"></i></a></li>
     </ul>
 </div>
-<div class="main-content">
-    <form class="text-right">
-        <div>
-            <div class="inline-block switch-text">Available for Chats :</div>
-            <div class="switch tiny round inline-block m-0 v-middle">
-                <input class="switch-input m-0" id="Switch" type="checkbox" name="Switch" checked>
-                <label class="switch-paddle" for="Switch"><span class="show-for-sr">Available for Chats</span></label>
-            </div>
+<div class="tabs-content agent-chat-tabs tab-chats-main-box" data-tabs-content="agent-chat-tabs">
+    <div class="tabs-panel is-active" id="panel1">
+        <div class="text-center">
+            <ul class="tabs" data-tabs id="agent-chat-tabs1">
+                <li class="tabs-title is-active"><a href="#panel11" aria-selected="true">James</a></li>
+                <li class="tabs-title"><a href="#panel21">Andrew</a></li>
+                <li class="tabs-title"><a href="#panel31">Tom</a></li>
+            </ul>
         </div>
-    </form>
-    <div class="text-center">
-        <ul class="tabs" data-tabs id="agent-chat-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Sally Test</a></li>
-            <li class="tabs-title"><a href="#panel2">Joe Test</a></li>
-            <li class="tabs-title"><a href="#panel3">Anna Test</a></li>
-            <li class="tabs-title"><a href="#panel4">Manager</a></li>
-            <li class="tabs-title"><a href="#panel5">Query <i class="fa fa-arrow-down"></i></a></li>
-        </ul>
-    </div>
-    <div class="tabs-content agent-chat-tabs tab-chats-main-box" data-tabs-content="agent-chat-tabs">
-        <div class="tabs-panel is-active" id="panel1">
-            <div class="text-center">
-                <ul class="tabs" data-tabs id="agent-chat-tabs1">
-                    <li class="tabs-title is-active"><a href="#panel11" aria-selected="true">Chat 1</a></li>
-                    <li class="tabs-title"><a href="#panel21">Chat 2</a></li>
-                    <li class="tabs-title"><a href="#panel31">Chat 3</a></li>
-                </ul>
-            </div>
-            <div class="tabs-content agent-chat-tabs" data-tabs-content="agent-chat-tabs1">
-                <div class="tabs-panel is-active" id="panel11">
-                    <div class="tab-agent-detail">
-                        <div class="tab-agent-header">
-                            <div class="large-6 columns">
-                                <div><span>Customer Name</span> :  James</div>
-                                <div><span>Customer Email</span> :  Not Entered</div>
-                                <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                            </div>
-                            <div class="large-6 columns">
-                                <div>Initiated Chat (or reply to proactive chat)</div>
-                                <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                            </div>
-                            <div class="clearfix"></div>
+        <div class="tabs-content agent-chat-tabs" data-tabs-content="agent-chat-tabs1">
+            <div class="tabs-panel is-active" id="panel11">
+                <div class="tab-agent-detail">
+                    <div class="tab-agent-header">
+                        <div class="large-6 columns">
+                            <div><span>Customer Name</span> :  James</div>
+                            <div><span>Customer Email</span> :  Not Entered</div>
+                            <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
                         </div>
-                        <div class="tab-agent-content">
-                            <div class="tab-agent-comment">
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="tab-agent-footer all-chats-box columns">
-                            <div class="large-12 columns p-0">
-                                <div class="large-11 medium-9 small-9 columns">
-                                    <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                        <input type="text" class="form-control">
-                                    </form>
-                                    <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                                <div class="large-1 medium-3 small-3 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-panel" id="panel21">
-                    <div class="tab-agent-detail">
-                        <div class="tab-agent-header">
-                            <div class="large-6 columns">
-                                <div><span>Customer Name</span> :  Andrew</div>
-                                <div><span>Customer Email</span> :  Not Entered</div>
-                                <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                            </div>
-                            <div class="large-6 columns">
-                                <div>Initiated Chat (or reply to proactive chat)</div>
-                                <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="tab-agent-content">
-                            <div class="tab-agent-comment">
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="tab-agent-footer all-chats-box columns">
-                            <div class="large-12 columns p-0">
-                                <div class="large-11 medium-9 small-9 columns">
-                                    <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                        <input type="text" class="form-control">
-                                    </form>
-                                    <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                                <div class="large-1 medium-3 small-3 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-panel" id="panel31">
-                    <div class="tab-agent-detail">
-                        <div class="tab-agent-header">
-                            <div class="large-6 columns">
-                                <div><span>Customer Name</span> :  Tom</div>
-                                <div><span>Customer Email</span> :  Not Entered</div>
-                                <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                            </div>
-                            <div class="large-6 columns">
-                                <div>Initiated Chat (or reply to proactive chat)</div>
-                                <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="tab-agent-content">
-                            <div class="tab-agent-comment">
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="small-3 large-2 columns l-name">Robert</div>
-                                    <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                                    <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                                </div>
-                                <div class="small-12 columns comment-box p-0 m-b-10">
-                                    <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                                    <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                                    <div class="small-3 large-2 columns r-name">James</div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="tab-agent-footer all-chats-box columns">
-                            <div class="large-12 columns p-0">
-                                <div class="large-11 medium-9 small-8 columns">
-                                    <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                        <input type="text" class="form-control">
-                                    </form>
-                                    <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                                <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tabs-panel" id="panel2">
-            <div class="tab-agent-detail">
-                <div class="tab-agent-header">
-                    <div class="large-6 columns">
-                        <div><span>Customer Name</span> :  Tom</div>
-                        <div><span>Customer Email</span> :  Not Entered</div>
-                        <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                    </div>
-                    <div class="large-6 columns">
-                        <div>Initiated Chat (or reply to proactive chat)</div>
-                        <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="tab-agent-content">
-                    <div class="tab-agent-comment">
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
+                        <div class="large-6 columns">
+                            <div>Initiated Chat (or reply to proactive chat)</div>
+                            <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                </div>
-                <div class="tab-agent-footer all-chats-box columns">
-                    <div class="large-12 columns p-0">
-                        <div class="large-11 medium-9 small-8 columns">
-                            <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                <input type="text" class="form-control">
-                            </form>
-                            <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                        <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                    <div class="tab-agent-content">
+                        <div class="tab-agent-comment">
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="tab-agent-footer all-chats-box columns">
+                        <div class="large-12 columns p-0">
+                            <div class="large-11 medium-9 small-9 columns">
+                                <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                                    <input type="text" class="form-control">
+                                </form>
+                                <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                            <div class="large-1 medium-3 small-3 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="tabs-panel" id="panel3">
-            <div class="tab-agent-detail">
-                <div class="tab-agent-header">
-                    <div class="large-6 columns">
-                        <div><span>Customer Name</span> :  Andrew</div>
-                        <div><span>Customer Email</span> :  Not Entered</div>
-                        <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                    </div>
-                    <div class="large-6 columns">
-                        <div>Initiated Chat (or reply to proactive chat)</div>
-                        <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="tab-agent-content">
-                    <div class="tab-agent-comment">
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+            <div class="tabs-panel" id="panel21">
+                <div class="tab-agent-detail">
+                    <div class="tab-agent-header">
+                        <div class="large-6 columns">
+                            <div><span>Customer Name</span> :  Andrew</div>
+                            <div><span>Customer Email</span> :  Not Entered</div>
+                            <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
                         </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
+                        <div class="large-6 columns">
+                            <div>Initiated Chat (or reply to proactive chat)</div>
+                            <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                </div>
-                <div class="tab-agent-footer all-chats-box columns">
-                    <div class="large-12 columns p-0">
-                        <div class="large-11 medium-9 small-8 columns">
-                            <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                <input type="text" class="form-control">
-                            </form>
-                            <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                        <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                    <div class="tab-agent-content">
+                        <div class="tab-agent-comment">
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="tab-agent-footer all-chats-box columns">
+                        <div class="large-12 columns p-0">
+                            <div class="large-11 medium-9 small-9 columns">
+                                <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                                    <input type="text" class="form-control">
+                                </form>
+                                <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                            <div class="large-1 medium-3 small-3 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="tabs-panel" id="panel4">
-            <div class="tab-agent-detail">
-                <div class="tab-agent-header">
-                    <div class="large-6 columns">
-                        <div><span>Customer Name</span> :  Tom</div>
-                        <div><span>Customer Email</span> :  Not Entered</div>
-                        <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
-                    </div>
-                    <div class="large-6 columns">
-                        <div>Initiated Chat (or reply to proactive chat)</div>
-                        <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="tab-agent-content">
-                    <div class="tab-agent-comment">
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+            <div class="tabs-panel" id="panel31">
+                <div class="tab-agent-detail">
+                    <div class="tab-agent-header">
+                        <div class="large-6 columns">
+                            <div><span>Customer Name</span> :  Tom</div>
+                            <div><span>Customer Email</span> :  Not Entered</div>
+                            <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
                         </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="small-3 large-2 columns l-name">Robert</div>
-                            <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
-                            <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
-                        </div>
-                        <div class="small-12 columns comment-box p-0 m-b-10">
-                            <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
-                            <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
-                            <div class="small-3 large-2 columns r-name">James</div>
+                        <div class="large-6 columns">
+                            <div>Initiated Chat (or reply to proactive chat)</div>
+                            <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                </div>
-                <div class="tab-agent-footer all-chats-box columns">
-                    <div class="large-12 columns p-0">
-                        <div class="large-11 medium-9 small-8 columns">
-                            <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
-                                <input type="text" class="form-control">
-                            </form>
-                            <a href="#" title="" class="form-que-img"><img src="<?= $this->basePath('images/question-icon.png'); ?>"></a> </div>
-                        <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                    <div class="tab-agent-content">
+                        <div class="tab-agent-comment">
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="small-3 large-2 columns l-name">Robert</div>
+                                <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                                <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                            </div>
+                            <div class="small-12 columns comment-box p-0 m-b-10">
+                                <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                                <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                                <div class="small-3 large-2 columns r-name">James</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="tabs-panel" id="panel5">
-            <div class='default'>
-                <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
-                    <div id="jqxgrid"> </div>
+                    <div class="tab-agent-footer all-chats-box columns">
+                        <div class="large-12 columns p-0">
+                            <div class="large-11 medium-9 small-8 columns">
+                                <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                                    <input type="text" class="form-control">
+                                </form>
+                                <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                            <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="tabs-panel" id="panel2">
+        <div class="tab-agent-detail">
+            <div class="tab-agent-header">
+                <div class="large-6 columns">
+                    <div><span>Customer Name</span> :  Tom</div>
+                    <div><span>Customer Email</span> :  Not Entered</div>
+                    <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
+                </div>
+                <div class="large-6 columns">
+                    <div>Initiated Chat (or reply to proactive chat)</div>
+                    <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="tab-agent-content">
+                <div class="tab-agent-comment">
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="tab-agent-footer all-chats-box columns">
+                <div class="large-12 columns p-0">
+                    <div class="large-11 medium-9 small-8 columns">
+                        <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                            <input type="text" class="form-control">
+                        </form>
+                        <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                    <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tabs-panel" id="panel3">
+        <div class="tab-agent-detail">
+            <div class="tab-agent-header">
+                <div class="large-6 columns">
+                    <div><span>Customer Name</span> :  Andrew</div>
+                    <div><span>Customer Email</span> :  Not Entered</div>
+                    <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
+                </div>
+                <div class="large-6 columns">
+                    <div>Initiated Chat (or reply to proactive chat)</div>
+                    <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="tab-agent-content">
+                <div class="tab-agent-comment">
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="tab-agent-footer all-chats-box columns">
+                <div class="large-12 columns p-0">
+                    <div class="large-11 medium-9 small-8 columns">
+                        <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                            <input type="text" class="form-control">
+                        </form>
+                        <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                    <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tabs-panel" id="panel4">
+        <div class="tab-agent-detail">
+            <div class="tab-agent-header">
+                <div class="large-6 columns">
+                    <div><span>Customer Name</span> :  Tom</div>
+                    <div><span>Customer Email</span> :  Not Entered</div>
+                    <div><span>Page on Site</span> :  http://www.companypage.com/pagecustomeronwhenchatinitiated/...</div>
+                </div>
+                <div class="large-6 columns">
+                    <div>Initiated Chat (or reply to proactive chat)</div>
+                    <div>Customer is using SMS (vs Chat on Site, or Chat on Mobile Site?</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="tab-agent-content">
+                <div class="tab-agent-comment">
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">Hello, I need help with XYZ</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I will be happy to help you with XYZ, What is your questions?</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">I’d like to know the dimensions, so it will fit</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="small-3 large-2 columns l-name">Robert</div>
+                        <div class="small-9 large-8 columns comments r-arrow">How can I help you?</div>
+                        <div class="large-2 columns hide-for-small-only r-name">&nbsp;</div>
+                    </div>
+                    <div class="small-12 columns comment-box p-0 m-b-10">
+                        <div class="large-2 columns hide-for-small-only  l-name">&nbsp;</div>
+                        <div class="small-9 large-8 columns comments l-arrow">I whould like to ask you questions.</div>
+                        <div class="small-3 large-2 columns r-name">James</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="tab-agent-footer all-chats-box columns">
+                <div class="large-12 columns p-0">
+                    <div class="large-11 medium-9 small-8 columns">
+                        <form class="tab-agent-input large-12 small-12 v-middle m-r-10">
+                            <input type="text" class="form-control">
+                        </form>
+                        <a href="#" title="" class="form-que-img" data-reveal-id="question-popup"><img src="<?= $this->basePath('images/question-icon.png') ?>"></a> </div>
+                    <div class="large-1 medium-3 small-4 text-right p-0 columns"> <a class="button small radius m-r-10">SEND</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tabs-panel" id="panel5">
+        <div class='default'>
+            <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+                <div id="jqxgrid"> </div>
+            </div>
+        </div>
+    </div>
 </div>
-<footer>
-    <div class="row">
-        <div class="large-12 small-12 columns footer-text">
-            Copyright 2016 <a href="<?= $this->url('home') ?>" title="ConnectWithMe" target="_blank">ConnectWithMe.com</a>   •   All Rights Reserved
-        </div>
-    </div>
-</footer>
-<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js'); ?>"></script> 
-<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js'); ?>"></script>
-<script src="http://foundation.zurb.com/sites/docs/v/5.5.3/assets/js/modernizr.js"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js'); ?>"></script> 
-<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js'); ?>"></script> 
-<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js'); ?>"></script>
-<script type="text/javascript" src="<?= $this->basePath('js/demos.js'); ?>"></script>
+
+<script type="text/javascript" src="<?= $this->basePath('js/jquery-1.12.3.min.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/foundation.min.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jquery.reveal.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->basePath('js/modernizr.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcore.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxswitchbutton.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdata.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxbuttons.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxscrollbar.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxmenu.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.sort.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.filter.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.selection.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxpanel.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxcheckbox.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxlistbox.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxdropdownlist.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/jqxgrid.pager.js') ?>"></script> 
+<script type="text/javascript" src="<?= $this->basePath('js/demos.js') ?>"></script> 
 <script type="text/javascript">
     $(document).ready(function () {
         var url = "../data/chat-query.xml";
@@ -476,3 +453,6 @@
 <script>
     $(document).foundation();
 </script>
+
+
+

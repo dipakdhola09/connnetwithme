@@ -1,12 +1,19 @@
 <?php
 
+/**
+ * @author Akshay <akshay.vyas@people-tree.com>
+ * @package Sign up - Structure
+ * @name Model User
+ * @access public
+ * @version Live Support S.P.1
+ */
+
 namespace Auth\Model;
 
 use DomainException;
 use Zend\Filter\StringTrim;
 use Zend\Filter\StripTags;
 use Zend\Filter\ToInt;
-
 use Zend\InputFilter\InputFilter;
 //use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
@@ -16,12 +23,10 @@ use Zend\Validator\Identical;
 use Zend\Validator\Digits;
 use Zend\I18n\Validator\Alpha;
 use Zend\I18n\Validator\Alnum;
-use Zend\Validator\Db\RecordExists;
-use Zend\Db\Adapter\Adapter;
+use Zend\Validator\Db\NoRecordExists;
 
+class Signup {
 
-class Signup
-{
     public $user_id;
     public $first_name;
     public $last_name;
@@ -37,69 +42,63 @@ class Signup
     public $confirm_email;
     public $created_at;
     public $updated_at;
-    
-
     // Add this property:
     private $inputFilter;
-    
 
-    public function exchangeArray(array $data)
-    {
-        $this->user_id     = !empty($data['user_id']) ? $data['user_id'] : null;
+    public function exchangeArray(array $data) {
+        $this->user_id = !empty($data['user_id']) ? $data['user_id'] : null;
         $this->first_name = !empty($data['first_name']) ? $data['first_name'] : null;
         $this->last_name = !empty($data['last_name']) ? $data['last_name'] : null;
         $this->company = !empty($data['company']) ? $data['company'] : null;
         $this->email = !empty($data['email']) ? $data['email'] : null;
-        $this->password  = !empty($data['password']) ? $data['password'] : null;
-        $this->phone  = !empty($data['phone']) ? $data['phone'] : null;
-        $this->ext  = !empty($data['ext']) ? $data['ext'] : null;
-        $this->no_of_employees  = !empty($data['no_of_employees']) ? $data['no_of_employees'] : null;
-        $this->plans  = !empty($data['plans']) ? $data['plans'] : null;
-        $this->user_type  = !empty($data['user_type']) ? $data['user_type'] : 'Manager';
-        $this->status  = !empty($data['status']) ? $data['status'] : 'Active';
+        $this->password = !empty($data['password']) ? $data['password'] : null;
+        $this->phone = !empty($data['phone']) ? $data['phone'] : null;
+        $this->ext = !empty($data['ext']) ? $data['ext'] : null;
+        $this->no_of_employee = !empty($data['no_of_employee']) ? $data['no_of_employee'] : null;
+        $this->plans = !empty($data['plan']) ? $data['plan'] : null;
+        $this->user_type = !empty($data['user_type']) ? $data['user_type'] : 'Manager';
+        $this->status = !empty($data['status']) ? $data['status'] : 'Active';
         //$this->confirm_email  = !empty($data['confirm_email']) ? $data['confirm_email'] : null;
-        $this->created_at  = !empty($data['created_at']) ? $data['created_at'] : date('Y-m-d');
-        $this->updated_at  = !empty($data['updated_at']) ? $data['updated_at'] : date('Y-m-d');
+        $this->created_at = !empty($data['created_at']) ? $data['created_at'] : date('Y-m-d');
+        $this->updated_at = !empty($data['updated_at']) ? $data['updated_at'] : date('Y-m-d');
     }
-    
+
     // Add the following method:
-    public function getArrayCopy()
-    {
+    public function getArrayCopy() {
         return [
-            'user_id'     => $this->id,
+            'user_id' => $this->id,
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
             'company' => $this->company,
             'email' => $this->email,
-            'password'  => $this->password,
+            'password' => $this->password,
             'phone' => $this->phone,
             'ext' => $this->ext,
-            'no_of_empoloyee' => $this->employees,
-            'plan' =>  $this->use,
+            'no_of_empoloyee' => $this->no_of_employee,
+            'plan' => $this->use,
             'user_type' => $this->user_type,
             'status' => $this->status,
-            'created_at' =>  $this->created_at,
-            'updated_at' =>  $this->updated_at,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
-    
-    /* 
+
+    /*
      * Add the following methods: 
      * Set Input Filter
      */
-    public function setInputFilter(InputFilterInterface $inputFilter)
-    {
+
+    public function setInputFilter(InputFilterInterface $inputFilter) {
         throw new DomainException(sprintf(
-            '%s does not allow injection of an alternate input filter',
-            __CLASS__
+                '%s does not allow injection of an alternate input filter', __CLASS__
         ));
     }
-    
+
     /*
      * Get Input Filter
      */
-    public function getInputFilter()
-    {
+
+    public function getInputFilter() {
         if ($this->inputFilter) {
             return $this->inputFilter;
         }
@@ -133,7 +132,7 @@ class Signup
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'last_name',
             'filters' => [
@@ -152,16 +151,15 @@ class Signup
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'company',
             'filters' => [
                 ['name' => StripTags::class],
                 ['name' => StringTrim::class],
             ],
-            
         ]);
-        
+
         $inputFilter->add([
             'name' => 'email',
             'required' => true,
@@ -182,7 +180,7 @@ class Signup
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'password',
             'required' => true,
@@ -202,7 +200,7 @@ class Signup
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'confirm_password',
             'required' => true,
@@ -220,11 +218,12 @@ class Signup
                         'encoding' => 'UTF-8',
                         'min' => 5,
                         'max' => 20,
+                        'messages' => array(\Zend\Validator\Identical::NOT_SAME => 'Password and Confirm password both are not same'),
                     ],
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'phone',
             'filters' => [
@@ -243,7 +242,7 @@ class Signup
                 ],
             ],
         ]);
-        
+
         $inputFilter->add([
             'name' => 'ext',
             'filters' => [
@@ -251,9 +250,9 @@ class Signup
                 ['name' => StringTrim::class],
             ],
         ]);
-        
+
         $inputFilter->add([
-            'name' => 'no_of_employees',
+            'name' => 'no_of_employee',
             'required' => TRUE,
             'filters' => [
                 ['name' => StripTags::class],
@@ -267,11 +266,10 @@ class Signup
                     ],
                 ],
             ],
-            
         ]);
-        
+
         $inputFilter->add([
-            'name' => 'plans',
+            'name' => 'plan',
             'required' => TRUE,
             'filters' => [
                 ['name' => StripTags::class],
@@ -285,11 +283,10 @@ class Signup
                     ],
                 ],
             ],
-            
         ]);
-        
-        
+
         $this->inputFilter = $inputFilter;
         return $this->inputFilter;
     }
+
 }
