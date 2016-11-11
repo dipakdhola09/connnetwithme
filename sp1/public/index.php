@@ -1,5 +1,5 @@
 <?php
-
+echo phpinfo();
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
