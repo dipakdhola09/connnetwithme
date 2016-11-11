@@ -4,7 +4,7 @@ use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
 //Development Environment Set
-define('PUBLIC_PATH', "http://".$_SERVER['HTTP_HOST']."/connectwithme/public/");
+//define('PUBLIC_PATH', "http://".$_SERVER['HTTP_HOST']."/connectwithme/public/");
 
 /**
  * This makes our life easier when dealing with paths. Everything is relative
