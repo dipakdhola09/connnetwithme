@@ -10,13 +10,13 @@ $password = "OFjfuhvhi2u!";
 // Create connection
 //$conn = new mysqli($servername, $username, $password);
 
-$link = mysql_connect("localhost","root","OFjfuhvhi2u!");
+$con = mysqli_connect("localhost","root","OFjfuhvhi2u!","my_db","livesupport");
 
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
 
 use Zend\Mvc\Application;
