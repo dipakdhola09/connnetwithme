@@ -18,6 +18,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
+echo "sucess"; 
 
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
