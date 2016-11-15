@@ -3,6 +3,20 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
+$servername = "livesupport-dev.chywulgsxzvp.us-east-1.rds.amazonaws.com";
+$username = "root";
+$password = "OFjfuhvhi2u!";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
+
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
