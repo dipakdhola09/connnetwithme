@@ -8,12 +8,16 @@ $username = "root";
 $password = "OFjfuhvhi2u!";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+//$conn = new mysqli($servername, $username, $password);
+
+$con = mysql_connect("localhost","root","OFjfuhvhi2u!","livesupport");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
 echo "Connected successfully";
 
 
