@@ -3,23 +3,6 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
-$servername = "localhost";
-$username = "root";
-$password = "OFjfuhvhi2u!";
-
-// Create connection
-//$conn = new mysqli($servername, $username, $password);
-
-$con = mysqli_connect("localhost","root","OFjfuhvhi2u!","my_db","livesupport");
-
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-echo "sucess"; 
-
 use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
