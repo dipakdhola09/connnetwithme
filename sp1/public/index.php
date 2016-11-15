@@ -3,7 +3,7 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
-$servername = "livesupport-dev.chywulgsxzvp.us-east-1.rds.amazonaws.com";
+$servername = "localhost";
 $username = "root";
 $password = "OFjfuhvhi2u!";
 
