@@ -14,7 +14,7 @@
 return [
      'db' => array(
          'driver'         => 'Pdo',
-         'dsn'            => 'mysql:dbname=livesupport;host=livesupport-dev.chywulgsxzvp.us-east-1.rds.amazonaws.com',
+         'dsn'            => 'mysql:dbname=livesupport;host=localhost',
          'driver_options' => array(
              PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
          ),
